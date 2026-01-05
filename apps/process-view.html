@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProcessView - Web-based SCADA system for chemical plant simulation and control by Simon Lab.">
+    <title>ProcessView | Simon Lab</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="Simon Lab">
+                <span>Simon Lab</span>
+            </a>
+            <nav class="nav">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#apps">Applications</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <div class="lang-selector">
+                <button class="lang-btn">
+                    <span class="lang-current">EN</span> &#9662;
+                </button>
+                <div class="lang-dropdown">
+                    <a href="process-view.html" class="active">English</a>
+                    <a href="../pl/apps/process-view.html">Polski</a>
+                    <a href="../de/apps/process-view.html">Deutsch</a>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <section class="app-hero">
+        <div class="container">
+            <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            <h1>ProcessView</h1>
+            <p class="tagline">Web-based SCADA system for chemical plant simulation and control</p>
+            <a href="https://process.simon-lab.org" class="btn btn-primary" target="_blank">Launch Application</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Real-time P&ID Visualization</strong> - Interactive process and instrumentation diagrams with live updates</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Physics Simulation</strong> - Accurate simulation of process dynamics including flow, levels, and temperatures</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Equipment Control</strong> - Control valves, pumps, and reactors with intuitive interface</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Annotation Mode</strong> - Add notes, markups, and comments directly on the P&ID</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Pipeline Management</strong> - Track and manage all pipeline segments with detailed specifications</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Multi-tenant Architecture</strong> - Support for multiple isolated plant simulations</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Print-ready Export</strong> - Generate technical drawing exports with proper title blocks</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Real-time Updates</strong> - WebSocket-based communication for instant state synchronization</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://process.simon-lab.org" class="btn btn-primary" target="_blank">Try It Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots">
+        <div class="container">
+            <h2>Screenshots</h2>
+            <div class="screenshots-grid">
+                <img src="../assets/screenshots/process-1.png" alt="ProcessView - Full Plant Overview">
+                <img src="../assets/screenshots/process-2.png" alt="ProcessView - Reactor Detail with Pipelines">
+                <img src="../assets/screenshots/process-3.png" alt="ProcessView - Print Export View">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Simon Lab</h4>
+                    <p>AI-Powered Engineering<br>for Chemical Industry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Applications</h4>
+                    <a href="label-designer.html">Pipeline Label Designer</a>
+                    <a href="process-view.html">ProcessView</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@simon-lab.org</p>
+                    <a href="https://simon-lab.org">simon-lab.org</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Simon Lab. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

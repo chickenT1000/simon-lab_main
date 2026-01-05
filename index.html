@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+    (function() {
+        if (!localStorage.getItem('simon-lab-lang')) {
+            var lang = (navigator.language || '').slice(0,2).toLowerCase();
+            if (lang === 'pl') { location.replace('pl/'); return; }
+            if (lang === 'de') { location.replace('de/'); return; }
+        }
+        localStorage.setItem('simon-lab-lang', 'en');
+    })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simon Lab - AI-Powered Engineering Services for the Chemical Industry. Plant design, commissioning, and operations.">
+    <title>Simon Lab | AI-Powered Engineering for Chemical Industry</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="Simon Lab">
+                <span>Simon Lab</span>
+            </a>
+            <nav class="nav">
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#apps" data-i18n="nav.apps">Applications</a>
+                <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-selector">
+                <button class="lang-btn">
+                    <span class="lang-current">EN</span> &#9662;
+                </button>
+                <div class="lang-dropdown">
+                    <a href="index.html" class="active">English</a>
+                    <a href="pl/index.html">Polski</a>
+                    <a href="de/index.html">Deutsch</a>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Engineering<br>for Chemical Industry</h1>
+            <p class="tagline">Harness the power of artificial intelligence in plant design, commissioning, and operations. Modern tools for modern challenges.</p>
+            <div class="hero-btns">
+                <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">&#128736;</div>
+                    <h3>Plant Design</h3>
+                    <p>AI-assisted process design and P&ID development. From concept to detailed engineering with intelligent automation tools.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">&#9881;</div>
+                    <h3>Commissioning</h3>
+                    <p>Streamlined commissioning workflows with digital checklists, real-time monitoring, and intelligent diagnostics support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">&#128202;</div>
+                    <h3>Operations Support</h3>
+                    <p>Optimize plant performance with AI-driven analytics, predictive maintenance, and smart process control solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2>Application Suite</h2>
+            <div class="apps-grid">
+                <a href="apps/label-designer.html" class="app-card">
+                    <img src="assets/screenshots/label-1.png" alt="Pipeline Label Designer">
+                    <div class="app-card-content">
+                        <h3>Pipeline Label Designer</h3>
+                        <p>ISO 20560-compliant pipeline label design toolkit. Create professional labels with hazard symbols, color bands, and flow indicators.</p>
+                        <span class="btn btn-outline">Learn More</span>
+                    </div>
+                </a>
+                <a href="apps/process-view.html" class="app-card">
+                    <img src="assets/screenshots/process-1.png" alt="ProcessView SCADA">
+                    <div class="app-card-content">
+                        <h3>ProcessView</h3>
+                        <p>Web-based SCADA system for chemical plant simulation and control. Real-time P&ID visualization with physics simulation.</p>
+                        <span class="btn btn-outline">Learn More</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Labels in Action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/gallery/label-photo-1.jpg" alt="Pipeline label - Filtrat/popluczyny">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/label-photo-2.jpg" alt="Pipeline label - Rozpuszczalnik">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/gallery/label-photo-3.jpg" alt="Pipeline label - Ekstrakt do cementacji">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Simon Lab</h2>
+            <div class="about-content">
+                <p>Simon Lab is an engineering services company specializing in digital solutions for the chemical industry. We combine deep process engineering expertise with cutting-edge AI technology to deliver innovative tools that transform how plants are designed, commissioned, and operated.</p>
+                <p>Our mission is to make sophisticated engineering tools accessible, intuitive, and intelligent, helping engineers focus on what matters most: solving complex problems and creating safe, efficient processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Simon Lab</h4>
+                    <p>AI-Powered Engineering<br>for Chemical Industry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Applications</h4>
+                    <a href="apps/label-designer.html">Pipeline Label Designer</a>
+                    <a href="apps/process-view.html">ProcessView</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@simon-lab.org</p>
+                    <a href="https://simon-lab.org">simon-lab.org</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Simon Lab. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="">
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProcessView - Webowy system SCADA do symulacji i sterowania instalacjami chemicznymi od Simon Lab.">
+    <title>ProcessView | Simon Lab</title>
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../../assets/logo.png" alt="Simon Lab">
+                <span>Simon Lab</span>
+            </a>
+            <nav class="nav">
+                <a href="../index.html#services">Usługi</a>
+                <a href="../index.html#apps">Aplikacje</a>
+                <a href="../index.html#about">O nas</a>
+                <a href="../index.html#contact">Kontakt</a>
+            </nav>
+            <div class="lang-selector">
+                <button class="lang-btn">
+                    <span class="lang-current">PL</span> &#9662;
+                </button>
+                <div class="lang-dropdown">
+                    <a href="../../apps/process-view.html">English</a>
+                    <a href="process-view.html" class="active">Polski</a>
+                    <a href="../../de/apps/process-view.html">Deutsch</a>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <section class="app-hero">
+        <div class="container">
+            <a href="../index.html" class="back-link">&larr; Powrót do strony głównej</a>
+            <h1>ProcessView</h1>
+            <p class="tagline">Webowy system SCADA do symulacji i sterowania instalacjami chemicznymi</p>
+            <a href="https://process.simon-lab.org" class="btn btn-primary" target="_blank">Uruchom aplikację</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Funkcje</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Wizualizacja P&ID w czasie rzeczywistym</strong> - Interaktywne schematy procesowe i oprzyrządowania z aktualizacjami na żywo</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Symulacja fizyczna</strong> - Dokładna symulacja dynamiki procesów włącznie z przepływem, poziomami i temperaturami</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Sterowanie urządzeniami</strong> - Sterowanie zaworami, pompami i reaktorami z intuicyjnym interfejsem</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Tryb adnotacji</strong> - Dodawanie notatek, oznaczeń i komentarzy bezpośrednio na schemacie P&ID</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Zarządzanie rurociągami</strong> - Śledzenie i zarządzanie wszystkimi segmentami rurociągów ze szczegółowymi specyfikacjami</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Architektura wielodostępna</strong> - Wsparcie dla wielu izolowanych symulacji instalacji</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Eksport gotowy do druku</strong> - Generowanie eksportów rysunków technicznych z prawidłowymi tabliczkami tytułowymi</p>
+                </div>
+                <div class="feature-item">
+                    <span class="check">&#10003;</span>
+                    <p><strong>Aktualizacje w czasie rzeczywistym</strong> - Komunikacja oparta na WebSocket dla natychmiastowej synchronizacji stanu</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://process.simon-lab.org" class="btn btn-primary" target="_blank">Wypróbuj teraz</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots">
+        <div class="container">
+            <h2>Zrzuty ekranu</h2>
+            <div class="screenshots-grid">
+                <img src="../../assets/screenshots/process-1.png" alt="ProcessView - Widok całej instalacji">
+                <img src="../../assets/screenshots/process-2.png" alt="ProcessView - Szczegóły reaktora z rurociągami">
+                <img src="../../assets/screenshots/process-3.png" alt="ProcessView - Widok eksportu do druku">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Simon Lab</h4>
+                    <p>Inżynieria wspierana AI<br>dla przemysłu chemicznego</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Aplikacje</h4>
+                    <a href="label-designer.html">Projektant etykiet rurociągowych</a>
+                    <a href="process-view.html">ProcessView</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>info@simon-lab.org</p>
+                    <a href="https://simon-lab.org">simon-lab.org</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Simon Lab. Wszelkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
