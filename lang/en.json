@@ -65,8 +65,8 @@
       "subtitle": "3D Environment from Code Definitions",
       "description": "Generates three-dimensional plant environments from ProcessView definitions. Spatial verification, clash detection, operator training—derived from the same source of truth."
     },
-    "flowquery": {
-      "name": "FlowQuery",
+    "capacityindex": {
+      "name": "CapacityIndex",
       "subtitle": "Business Intelligence from Simulation Data",
       "description": "Analytics from process definitions. Throughput projections, energy forecasts, capacity planning—no manual data extraction."
     },

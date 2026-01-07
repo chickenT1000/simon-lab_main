@@ -65,8 +65,8 @@
       "subtitle": "3D-Umgebung aus Code-Definitionen",
       "description": "Generiert dreidimensionale Anlagenumgebungen aus ProcessView-Definitionen. Räumliche Verifikation, Kollisionserkennung, Bedienertraining—abgeleitet aus derselben Quelle der Wahrheit."
     },
-    "flowquery": {
-      "name": "FlowQuery",
+    "capacityindex": {
+      "name": "CapacityIndex",
       "subtitle": "Business Intelligence aus Simulationsdaten",
       "description": "Analytik aus Prozessdefinitionen. Durchsatzprognosen, Energieprognosen, Kapazitätsplanung—ohne manuelle Datenextraktion."
     },

@@ -65,8 +65,8 @@
       "subtitle": "Środowisko 3D z definicji kodowych",
       "description": "Generuje trójwymiarowe środowiska instalacji z definicji ProcessView. Weryfikacja przestrzenna, wykrywanie kolizji, środowiska szkoleniowe dla operatorów – wszystko z tego samego źródła prawdy."
     },
-    "flowquery": {
-      "name": "FlowQuery",
+    "capacityindex": {
+      "name": "CapacityIndex",
       "subtitle": "Business Intelligence z danych symulacji",
       "description": "Analityka bezpośrednio z definicji procesowych. Prognozy przepustowości, prognozy zużycia energii, planowanie wydajności – bez ręcznej ekstrakcji danych."
     },
