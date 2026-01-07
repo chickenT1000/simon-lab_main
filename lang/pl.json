@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Simon Lab | Inżynieria Obliczeniowa dla Projektów Chemicznych",
+    "description": "Simon Lab - Inżynieria Obliczeniowa dla Projektów Chemicznych. Przepływy pracy oparte na kodzie, czyniące projekty śledzonymi, weryfikowalnymi i gotowymi na AI."
+  },
+  "nav": {
+    "mission": "Misja",
+    "apps": "Aplikacje",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Inżynieria Obliczeniowa<br>dla Projektów Chemicznych",
+    "tagline": "Od stołu laboratoryjnego do repozytorium. Strukturyzacja danych inżynieryjnych jako kod—śledzony, weryfikowalny i maszynowo czytelny od pierwszego dnia.",
+    "cta_apps": "Poznaj pakiet",
+    "cta_contact": "Skontaktuj się"
+  },
+  "mission": {
+    "title": "Misja",
+    "motto": "Natywnie kodowy. Gotowy na AI. Wolny od błędów.",
+    "p1": "Przemysł chemiczny pozostaje w tyle. Podczas gdy oprogramowanie, finanse i produkcja przyjęły przepływy obliczeniowe, inżynieria procesowa pozostaje uwięziona w statycznych dokumentach—PDF-ach, które umierają po wysłaniu, arkuszach kalkulacyjnych, które dryfują z każdą rewizją, rysunkach, których żaden system nie może przeanalizować.",
+    "p2": "To jest Zerwany Łańcuch. Dane utworzone w jednej fazie nie mogą przepłynąć do następnej. Każde przekazanie wprowadza błąd. Każdy projekt zaczyna się od zera.",
+    "p3": "Jesteśmy tutaj, aby to naprawić.",
+    "p4": "Droga naprzód to Projekt-jako-Kod: definiowanie projektów chemicznych w ustrukturyzowanych, kontrolowanych wersjami formatach od fazy grantowej. Gdy projekt jest kodem, matematyka sama się waliduje. Gdy projekt jest kodem, symulacje kompilują się z definicji. Gdy projekt jest kodem, systemy AI mogą czytać, sprawdzać i pomagać—nie dlatego, że zautomatyzowaliśmy inżynierię, ale dlatego, że uczyniliśmy inżynierię obliczeniową.",
+    "p5": "To nie polega na zastępowaniu inżynierów. Chodzi o danie im infrastruktury, która nadąża za dostępnymi narzędziami."
+  },
+  "philosophy": {
+    "title": "Projekt-jako-Kod",
+    "p1": "Tradycyjne projekty chemiczne żyją w statycznych dokumentach. Wnioski grantowe stają się PDF-ami. P&ID stają się rysunkami. Symulacje stają się arkuszami kalkulacyjnymi. Każde przekazanie wprowadza dryft, każda rewizja ryzykuje niespójność, a ostatecznie—logika projektu umiera w formatach, których żaden system nie może przeanalizować.",
+    "p2": "Projekt-jako-Kod odwraca ten paradygmat.",
+    "p3": "Definiujemy parametry projektu w ustrukturyzowanym, kontrolowanym wersjami kodzie od fazy grantowej. Matematyka jest walidowana przed pierwszym wnioskiem o finansowanie. Przepływ procesowy kompiluje się do działającej symulacji zanim narysowana zostanie pierwsza linia.",
+    "p4": "To nie AI generuje twoją instalację. To jest intencja inżynierska uchwycona z wystarczającą precyzją, aby narzędzia obliczeniowe mogły czytać, walidować i optymalizować razem z twoim zespołem.",
+    "p5": "Rezultat:",
+    "p5_cont": "Projekty, które są Obliczeniowo Gotowe. Audytowalne przy każdej rewizji. Śledzone do każdej decyzji."
+  },
+  "apps": {
+    "title": "Pakiet Aplikacji",
+    "intro": "Metodologia jest dostarczana przez dedykowany pakiet aplikacji—narzędzia dla inżynierii chemicznej opartej na kodzie.",
+    "current": "Aktualne Aplikacje",
+    "future": "Przyszłe Aplikacje",
+    "in_dev": "W rozwoju",
+    "learn_more": "Dowiedz się więcej",
+    "labelhash": {
+      "name": "LabelHash",
+      "subtitle": "Precyzyjne etykietowanie urządzeń procesowych",
+      "description": "Generowanie etykiet zgodnych z ISO 20560 dla rurociągów, zbiorników, reaktorów i aparatów. Standaryzowana identyfikacja z symbolami zagrożeń, pasami kolorów i wskaźnikami przepływu. Praktyczne narzędzie dla inżynierów."
+    },
+    "processview": {
+      "name": "ProcessView",
+      "subtitle": "Wizualizacja przepływu",
+      "description": "Webowa wizualizacja P&ID z wbudowaną symulacją fizyczną. ProcessView kompiluje definicje procesowe do działających modeli—waliduj zachowanie przepływu i logikę sterowania przed uruchomieniem. Interfejs SCADA w czasie rzeczywistym do monitorowania operacyjnego."
+    },
+    "grantkernel": {
+      "name": "GrantKernel",
+      "subtitle": "Główny silnik logiczny",
+      "description": "Konwertuje intencje badawcze na obliczeniowe definicje projektu. Definiuj parametry procesowe, bilanse materiałowe i specyfikacje urządzeń w ustrukturyzowanym kodzie. Waliduje matematykę, wymusza spójność jednostek, kompiluje zgodne PDF-y. Wniosek grantowy staje się wykonywalną dokumentacją."
+    },
+    "labdaemon": {
+      "name": "LabDaemon",
+      "subtitle": "Proces w tle dla integralności eksperymentów",
+      "description": "Multi-agentowy asystent dla przepływów laboratoryjnych. Monitoruje postęp eksperymentów, podpowiada wprowadzanie danych, zapewnia że żaden pomiar nie zostanie niezapisany. Trwałe śledzenie od hipotezy do zestawu danych."
+    },
+    "plantmesh": {
+      "name": "PlantMesh",
+      "subtitle": "Środowisko 3D z definicji kodowych",
+      "description": "Generuje trójwymiarowe środowiska instalacji z definicji ProcessView. Weryfikacja przestrzenna, wykrywanie kolizji, szkolenie operatorów—wyprowadzone z tego samego źródła prawdy."
+    },
+    "flowquery": {
+      "name": "FlowQuery",
+      "subtitle": "Business Intelligence z danych symulacji",
+      "description": "Analityka z definicji procesowych. Projekcje przepustowości, prognozy energetyczne, planowanie wydajności—bez ręcznej ekstrakcji danych."
+    },
+    "sitecommit": {
+      "name": "SiteCommit",
+      "subtitle": "Kontrola wersji dla budowy",
+      "description": "Śledzi zmiany specyfikacji, substytucje dostawców, modyfikacje budowlane z pełną historią rewizji. Wiedz co zostało wyspecyfikowane versus co zostało zbudowane."
+    }
+  },
+  "about": {
+    "title": "O Simon Lab",
+    "p1": "Simon Lab dostarcza usługi inżynierii obliczeniowej dla przemysłu chemicznego. Łączymy wiedzę inżynierii procesowej z metodologiami opartymi na kodzie, aby strukturyzować projekty, które są audytowalne, śledzone i gotowe na narzędzia obliczeniowe dziś i jutro.",
+    "p2": "Nasza praca buduje most między tradycyjną praktyką inżynierską a nowoczesną infrastrukturą programową—zapewniając, że projekty chemiczne mogą korzystać z kontroli wersji, walidacji i wsparcia obliczeniowego bez poświęcania rygoru inżynierskiego."
+  },
+  "footer": {
+    "tagline": "Inżynieria Obliczeniowa<br>dla Projektów Chemicznych",
+    "apps_title": "Aplikacje",
+    "contact_title": "Kontakt",
+    "copyright": "© 2026 Simon Lab. Wszelkie prawa zastrzeżone."
+  }
+}

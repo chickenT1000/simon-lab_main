@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Simon Lab | Computational Engineering for Chemical Projects",
+    "description": "Simon Lab - Computational Engineering for Chemical Projects. Code-native workflows making projects traceable, verifiable, and AI-ready."
+  },
+  "nav": {
+    "mission": "Mission",
+    "apps": "Applications",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Computational Engineering<br>for Chemical Projects",
+    "tagline": "From lab bench to repository. Structuring engineering data as code—traceable, verifiable, and machine-readable from day one.",
+    "cta_apps": "Explore the Suite",
+    "cta_contact": "Get in Touch"
+  },
+  "mission": {
+    "title": "The Mission",
+    "motto": "Code-Native. AI-Ready. Bug-Free.",
+    "p1": "The chemical industry is falling behind. While software, finance, and manufacturing have embraced computational workflows, process engineering remains trapped in static documents—PDFs that die on submission, spreadsheets that drift with every revision, drawings that no system can parse.",
+    "p2": "This is the Broken Chain. Data created in one phase cannot flow to the next. Every handoff introduces error. Every project starts from scratch.",
+    "p3": "We are here to fix it.",
+    "p4": "The path forward is Project-as-Code: defining chemical projects in structured, version-controlled formats from the grant phase onward. When the project is code, the mathematics validate themselves. When the project is code, simulations compile from definitions. When the project is code, AI systems can read, check, and assist—not because we've automated engineering, but because we've made engineering computational.",
+    "p5": "This isn't about replacing engineers. It's about giving them infrastructure that keeps pace with the tools now available."
+  },
+  "philosophy": {
+    "title": "Project-as-Code",
+    "p1": "Traditional chemical projects live in static documents. Grant proposals become PDFs. P&IDs become drawings. Simulations become spreadsheets. Each handoff introduces drift, each revision risks inconsistency, and ultimately—the project's logic dies in formats no system can parse.",
+    "p2": "Project-as-Code inverts this paradigm.",
+    "p3": "We define project parameters in structured, version-controlled code from the grant phase forward. The mathematics are validated before the first funding request. The process flow compiles into a working simulation before the first line is drawn.",
+    "p4": "This isn't AI generating your plant. This is engineering intent captured with sufficient rigor that computational tools can read, validate, and optimize alongside your team.",
+    "p5": "The result:",
+    "p5_cont": "Projects that are Computational-Ready. Auditable at every revision. Traceable to every decision."
+  },
+  "apps": {
+    "title": "Application Suite",
+    "intro": "The methodology is delivered through a purpose-built application suite—tools for code-native chemical engineering.",
+    "current": "Current Applications",
+    "future": "Future Applications",
+    "in_dev": "In Development",
+    "learn_more": "Learn More",
+    "labelhash": {
+      "name": "LabelHash",
+      "subtitle": "Precision Labeling for Process Equipment",
+      "description": "ISO 20560-compliant label generation for pipelines, tanks, reactors, and vessels. Standardized identification with hazard symbols, color bands, and flow indicators. A practical utility for engineers."
+    },
+    "processview": {
+      "name": "ProcessView",
+      "subtitle": "Visualizing the Flow",
+      "description": "Web-based P&ID visualization with embedded physics simulation. ProcessView compiles process definitions into working models—validate flow behavior and control logic before commissioning. Real-time SCADA interface for operational monitoring."
+    },
+    "grantkernel": {
+      "name": "GrantKernel",
+      "subtitle": "The Core Logic Engine",
+      "description": "Converts research intent into computable project definitions. Define process parameters, material balances, and equipment specifications in structured code. Validates mathematics, enforces unit consistency, compiles compliant PDF outputs. The grant proposal becomes executable documentation."
+    },
+    "labdaemon": {
+      "name": "LabDaemon",
+      "subtitle": "Background Process for Experiment Integrity",
+      "description": "Multi-agent assistant for laboratory workflows. Monitors experiment progress, prompts for data entry, ensures no measurement goes unrecorded. Persistent tracking from hypothesis to dataset."
+    },
+    "plantmesh": {
+      "name": "PlantMesh",
+      "subtitle": "3D Environment from Code Definitions",
+      "description": "Generates three-dimensional plant environments from ProcessView definitions. Spatial verification, clash detection, operator training—derived from the same source of truth."
+    },
+    "flowquery": {
+      "name": "FlowQuery",
+      "subtitle": "Business Intelligence from Simulation Data",
+      "description": "Analytics from process definitions. Throughput projections, energy forecasts, capacity planning—no manual data extraction."
+    },
+    "sitecommit": {
+      "name": "SiteCommit",
+      "subtitle": "Version Control for Construction",
+      "description": "Tracks specification changes, vendor substitutions, construction modifications with full revision history. Know what was specified versus what was built."
+    }
+  },
+  "about": {
+    "title": "About Simon Lab",
+    "p1": "Simon Lab delivers computational engineering services for the chemical industry. We combine process engineering expertise with code-native methodologies to structure projects that are auditable, traceable, and ready for the computational tools of today and tomorrow.",
+    "p2": "Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor."
+  },
+  "footer": {
+    "tagline": "Computational Engineering<br>for Chemical Projects",
+    "apps_title": "Applications",
+    "contact_title": "Contact",
+    "copyright": "© 2026 Simon Lab. All rights reserved."
+  }
+}

@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script>
-    (function() {
-        if (!localStorage.getItem('simon-lab-lang')) {
-            var lang = (navigator.language || '').slice(0,2).toLowerCase();
-            if (lang === 'pl') { location.replace('pl/'); return; }
-            if (lang === 'de') { location.replace('de/'); return; }
-        }
-        localStorage.setItem('simon-lab-lang', 'en');
-    })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simon Lab - AI-Powered Engineering Services for the Chemical Industry. Plant design, commissioning, and operations.">
-    <title>Simon Lab | AI-Powered Engineering for Chemical Industry</title>
+    <meta name="description" content="Simon Lab - Computational Engineering for Chemical Projects. Code-native workflows making projects traceable, verifiable, and AI-ready.">
+    <title>Simon Lab | Computational Engineering for Chemical Projects</title>
+    
+    <!-- SEO -->
+    <meta name="keywords" content="computational engineering, chemical engineering, P&ID, SCADA, process simulation, code-native, project-as-code, chemical industry">
+    <meta name="author" content="Simon Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simon-lab.org">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Simon Lab | Computational Engineering for Chemical Projects">
+    <meta property="og:description" content="Code-native workflows making projects traceable, verifiable, and AI-ready.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simon-lab.org">
+    <meta property="og:image" content="https://simon-lab.org/assets/logo.png">
+    <meta property="og:site_name" content="Simon Lab">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simon Lab | Computational Engineering">
+    <meta name="twitter:description" content="Code-native workflows for chemical engineering projects.">
+    <meta name="twitter:image" content="https://simon-lab.org/assets/logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Simon Lab",
+        "url": "https://simon-lab.org",
+        "logo": "https://simon-lab.org/assets/logo.png",
+        "description": "Computational Engineering for Chemical Projects. Code-native workflows making projects traceable, verifiable, and AI-ready.",
+        "sameAs": []
+    }
+    </script>
+    
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +50,10 @@
         <div class="container">
             <a href="/" class="logo">
                 <img src="assets/logo.png" alt="Simon Lab">
-                <span>Simon Lab</span>
             </a>
             <nav class="nav">
-                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#mission" data-i18n="nav.mission">Mission</a>
                 <a href="#apps" data-i18n="nav.apps">Applications</a>
-                <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
                 <a href="#about" data-i18n="nav.about">About</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
@@ -40,9 +62,9 @@
                     <span class="lang-current">EN</span> &#9662;
                 </button>
                 <div class="lang-dropdown">
-                    <a href="index.html" class="active">English</a>
-                    <a href="pl/index.html">Polski</a>
-                    <a href="de/index.html">Deutsch</a>
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="pl">Polski</a>
+                    <a href="#" data-lang="de">Deutsch</a>
                 </div>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
@@ -51,74 +73,115 @@
 
     <section class="hero">
         <div class="container">
-            <h1>AI-Powered Engineering<br>for Chemical Industry</h1>
-            <p class="tagline">Harness the power of artificial intelligence in plant design, commissioning, and operations. Modern tools for modern challenges.</p>
+            <h1 data-i18n="hero.title">Computational Engineering<br>for Chemical Projects</h1>
+            <p class="tagline" data-i18n="hero.tagline">From lab bench to repository. Structuring engineering data as code—traceable, verifiable, and machine-readable from day one.</p>
             <div class="hero-btns">
-                <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <a href="#apps" class="btn btn-primary" data-i18n="hero.cta_apps">Explore the Suite</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
+    <section id="mission" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">&#128736;</div>
-                    <h3>Plant Design</h3>
-                    <p>AI-assisted process design and P&ID development. From concept to detailed engineering with intelligent automation tools.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">&#9881;</div>
-                    <h3>Commissioning</h3>
-                    <p>Streamlined commissioning workflows with digital checklists, real-time monitoring, and intelligent diagnostics support.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">&#128202;</div>
-                    <h3>Operations Support</h3>
-                    <p>Optimize plant performance with AI-driven analytics, predictive maintenance, and smart process control solutions.</p>
-                </div>
+            <h2 data-i18n="mission.title">The Mission</h2>
+            <div class="about-content">
+                <p><strong data-i18n="mission.motto">Code-Native. AI-Ready. Bug-Free.</strong></p>
+                <p data-i18n="mission.p1">The chemical industry is falling behind. While software, finance, and manufacturing have embraced computational workflows, process engineering remains trapped in static documents—PDFs that die on submission, spreadsheets that drift with every revision, drawings that no system can parse.</p>
+                <p data-i18n="mission.p2">This is the Broken Chain. Data created in one phase cannot flow to the next. Every handoff introduces error. Every project starts from scratch.</p>
+                <p><strong data-i18n="mission.p3">We are here to fix it.</strong></p>
+                <p data-i18n="mission.p4">The path forward is Project-as-Code: defining chemical projects in structured, version-controlled formats from the grant phase onward. When the project is code, the mathematics validate themselves. When the project is code, simulations compile from definitions. When the project is code, AI systems can read, check, and assist—not because we've automated engineering, but because we've made engineering computational.</p>
+                <p data-i18n="mission.p5">This isn't about replacing engineers. It's about giving them infrastructure that keeps pace with the tools now available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="about">
+        <div class="container">
+            <h2 data-i18n="philosophy.title">Project-as-Code</h2>
+            <div class="about-content">
+                <p data-i18n="philosophy.p1">Traditional chemical projects live in static documents. Grant proposals become PDFs. P&IDs become drawings. Simulations become spreadsheets. Each handoff introduces drift, each revision risks inconsistency, and ultimately—the project's logic dies in formats no system can parse.</p>
+                <p><strong data-i18n="philosophy.p2">Project-as-Code inverts this paradigm.</strong></p>
+                <p data-i18n="philosophy.p3">We define project parameters in structured, version-controlled code from the grant phase forward. The mathematics are validated before the first funding request. The process flow compiles into a working simulation before the first line is drawn.</p>
+                <p data-i18n="philosophy.p4">This isn't AI generating your plant. This is engineering intent captured with sufficient rigor that computational tools can read, validate, and optimize alongside your team.</p>
+                <p><strong data-i18n="philosophy.p5">The result:</strong> <span data-i18n="philosophy.p5_cont">Projects that are Computational-Ready. Auditable at every revision. Traceable to every decision.</span></p>
             </div>
         </div>
     </section>
 
     <section id="apps" class="apps">
         <div class="container">
-            <h2>Application Suite</h2>
+            <h2 data-i18n="apps.title">Application Suite</h2>
+            <p class="section-intro" data-i18n="apps.intro">The methodology is delivered through a purpose-built application suite—tools for code-native chemical engineering.</p>
+            
+            <h3 class="apps-category" data-i18n="apps.current">Current Applications</h3>
             <div class="apps-grid">
-                <a href="apps/label-designer.html" class="app-card">
-                    <img src="assets/screenshots/label-1.png" alt="Pipeline Label Designer">
+                <a href="apps/labelhash.html" class="app-card">
+                    <img src="assets/screenshots/label-1.png" alt="LabelHash">
                     <div class="app-card-content">
-                        <h3>Pipeline Label Designer</h3>
-                        <p>ISO 20560-compliant pipeline label design toolkit. Create professional labels with hazard symbols, color bands, and flow indicators.</p>
-                        <span class="btn btn-outline">Learn More</span>
+                        <h3 data-i18n="apps.labelhash.name">LabelHash</h3>
+                        <p class="app-subtitle" data-i18n="apps.labelhash.subtitle">Precision Labeling for Process Equipment</p>
+                        <p data-i18n="apps.labelhash.description">ISO 20560-compliant label generation for pipelines, tanks, reactors, and vessels. Standardized identification with hazard symbols, color bands, and flow indicators. A practical utility for engineers.</p>
+                        <span class="btn btn-outline" data-i18n="apps.learn_more">Learn More</span>
                     </div>
                 </a>
                 <a href="apps/process-view.html" class="app-card">
-                    <img src="assets/screenshots/process-1.png" alt="ProcessView SCADA">
+                    <img src="assets/screenshots/process-1.png" alt="ProcessView">
                     <div class="app-card-content">
-                        <h3>ProcessView</h3>
-                        <p>Web-based SCADA system for chemical plant simulation and control. Real-time P&ID visualization with physics simulation.</p>
-                        <span class="btn btn-outline">Learn More</span>
+                        <h3 data-i18n="apps.processview.name">ProcessView</h3>
+                        <p class="app-subtitle" data-i18n="apps.processview.subtitle">Visualizing the Flow</p>
+                        <p data-i18n="apps.processview.description">Web-based P&ID visualization with embedded physics simulation. ProcessView compiles process definitions into working models—validate flow behavior and control logic before commissioning. Real-time SCADA interface for operational monitoring.</p>
+                        <span class="btn btn-outline" data-i18n="apps.learn_more">Learn More</span>
                     </div>
                 </a>
             </div>
-        </div>
-    </section>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Labels in Action</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/gallery/label-photo-1.jpg" alt="Pipeline label - Filtrat/popluczyny">
+            <h3 class="apps-category" data-i18n="apps.future">Future Applications</h3>
+            <div class="apps-grid future-apps">
+                <div class="app-card app-card-future">
+                    <img src="assets/screenshots/placeholder.svg" alt="GrantKernel">
+                    <div class="app-card-content">
+                        <span class="app-status" data-i18n="apps.in_dev">In Development</span>
+                        <h3 data-i18n="apps.grantkernel.name">GrantKernel</h3>
+                        <p class="app-subtitle" data-i18n="apps.grantkernel.subtitle">The Core Logic Engine</p>
+                        <p data-i18n="apps.grantkernel.description">Converts research intent into computable project definitions. Define process parameters, material balances, and equipment specifications in structured code. Validates mathematics, enforces unit consistency, compiles compliant PDF outputs. The grant proposal becomes executable documentation.</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery/label-photo-2.jpg" alt="Pipeline label - Rozpuszczalnik">
+                <div class="app-card app-card-future">
+                    <img src="assets/screenshots/placeholder.svg" alt="LabDaemon">
+                    <div class="app-card-content">
+                        <span class="app-status" data-i18n="apps.in_dev">In Development</span>
+                        <h3 data-i18n="apps.labdaemon.name">LabDaemon</h3>
+                        <p class="app-subtitle" data-i18n="apps.labdaemon.subtitle">Background Process for Experiment Integrity</p>
+                        <p data-i18n="apps.labdaemon.description">Multi-agent assistant for laboratory workflows. Monitors experiment progress, prompts for data entry, ensures no measurement goes unrecorded. Persistent tracking from hypothesis to dataset.</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery/label-photo-3.jpg" alt="Pipeline label - Ekstrakt do cementacji">
+                <div class="app-card app-card-future">
+                    <img src="assets/screenshots/placeholder.svg" alt="PlantMesh">
+                    <div class="app-card-content">
+                        <span class="app-status" data-i18n="apps.in_dev">In Development</span>
+                        <h3 data-i18n="apps.plantmesh.name">PlantMesh</h3>
+                        <p class="app-subtitle" data-i18n="apps.plantmesh.subtitle">3D Environment from Code Definitions</p>
+                        <p data-i18n="apps.plantmesh.description">Generates three-dimensional plant environments from ProcessView definitions. Spatial verification, clash detection, operator training—derived from the same source of truth.</p>
+                    </div>
+                </div>
+                <div class="app-card app-card-future">
+                    <img src="assets/screenshots/placeholder.svg" alt="FlowQuery">
+                    <div class="app-card-content">
+                        <span class="app-status" data-i18n="apps.in_dev">In Development</span>
+                        <h3 data-i18n="apps.flowquery.name">FlowQuery</h3>
+                        <p class="app-subtitle" data-i18n="apps.flowquery.subtitle">Business Intelligence from Simulation Data</p>
+                        <p data-i18n="apps.flowquery.description">Analytics from process definitions. Throughput projections, energy forecasts, capacity planning—no manual data extraction.</p>
+                    </div>
+                </div>
+                <div class="app-card app-card-future">
+                    <img src="assets/screenshots/placeholder.svg" alt="SiteCommit">
+                    <div class="app-card-content">
+                        <span class="app-status" data-i18n="apps.in_dev">In Development</span>
+                        <h3 data-i18n="apps.sitecommit.name">SiteCommit</h3>
+                        <p class="app-subtitle" data-i18n="apps.sitecommit.subtitle">Version Control for Construction</p>
+                        <p data-i18n="apps.sitecommit.description">Tracks specification changes, vendor substitutions, construction modifications with full revision history. Know what was specified versus what was built.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,10 +189,10 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Simon Lab</h2>
+            <h2 data-i18n="about.title">About Simon Lab</h2>
             <div class="about-content">
-                <p>Simon Lab is an engineering services company specializing in digital solutions for the chemical industry. We combine deep process engineering expertise with cutting-edge AI technology to deliver innovative tools that transform how plants are designed, commissioned, and operated.</p>
-                <p>Our mission is to make sophisticated engineering tools accessible, intuitive, and intelligent, helping engineers focus on what matters most: solving complex problems and creating safe, efficient processes.</p>
+                <p data-i18n="about.p1">Simon Lab delivers computational engineering services for the chemical industry. We combine process engineering expertise with code-native methodologies to structure projects that are auditable, traceable, and ready for the computational tools of today and tomorrow.</p>
+                <p data-i18n="about.p2">Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor.</p>
             </div>
         </div>
     </section>
@@ -139,20 +202,20 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Simon Lab</h4>
-                    <p>AI-Powered Engineering<br>for Chemical Industry</p>
+                    <p data-i18n="footer.tagline">Computational Engineering<br>for Chemical Projects</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Applications</h4>
-                    <a href="apps/label-designer.html">Pipeline Label Designer</a>
+                    <h4 data-i18n="footer.apps_title">Applications</h4>
+                    <a href="apps/labelhash.html">LabelHash</a>
                     <a href="apps/process-view.html">ProcessView</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>info@simon-lab.org</p>
+                    <h4 data-i18n="footer.contact_title">Contact</h4>
+                    <p class="email-contact" data-user="info" data-domain="simon-lab.org"></p>
                     <a href="https://simon-lab.org">simon-lab.org</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="footer.copyright">
                 &copy; 2026 Simon Lab. All rights reserved.
             </div>
         </div>
@@ -164,5 +227,6 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>

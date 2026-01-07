@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             langDropdown.classList.toggle('active');
         });
-
-        // Save language preference when clicking language links
-        langDropdown.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                var href = this.getAttribute('href') || '';
-                if (href.indexOf('/pl') !== -1) localStorage.setItem('simon-lab-lang', 'pl');
-                else if (href.indexOf('/de') !== -1) localStorage.setItem('simon-lab-lang', 'de');
-                else localStorage.setItem('simon-lab-lang', 'en');
-            });
-        });
     }
+
+    // Email obfuscation - decode on page load
+    document.querySelectorAll('.email-contact').forEach(function(el) {
+        const user = el.dataset.user;
+        const domain = el.dataset.domain;
+        if (user && domain) {
+            const email = user + '@' + domain;
+            el.innerHTML = '<a href="ma' + 'ilto:' + email + '">' + email + '</a>';
+        }
+    });
 
     // Close dropdowns on outside click
     document.addEventListener('click', function(e) {

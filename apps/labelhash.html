@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pipeline Label Designer - ISO 20560-compliant pipeline label design toolkit by Simon Lab.">
-    <title>Pipeline Label Designer | Simon Lab</title>
+    <meta name="description" content="LabelHash - ISO 20560-compliant pipeline label design toolkit by Simon Lab.">
+    <title>LabelHash | Simon Lab</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +16,9 @@
         <div class="container">
             <a href="../index.html" class="logo">
                 <img src="../assets/logo.png" alt="Simon Lab">
-                <span>Simon Lab</span>
             </a>
             <nav class="nav">
-                <a href="../index.html#services">Services</a>
+                <a href="../index.html#mission">Mission</a>
                 <a href="../index.html#apps">Applications</a>
                 <a href="../index.html#about">About</a>
                 <a href="../index.html#contact">Contact</a>
@@ -29,9 +28,9 @@
                     <span class="lang-current">EN</span> &#9662;
                 </button>
                 <div class="lang-dropdown">
-                    <a href="label-designer.html" class="active">English</a>
-                    <a href="../pl/apps/label-designer.html">Polski</a>
-                    <a href="../de/apps/label-designer.html">Deutsch</a>
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="pl">Polski</a>
+                    <a href="#" data-lang="de">Deutsch</a>
                 </div>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
@@ -41,8 +40,8 @@
     <section class="app-hero">
         <div class="container">
             <a href="../index.html" class="back-link">&larr; Back to Home</a>
-            <h1>Pipeline Label Designer</h1>
-            <p class="tagline">ISO 20560-compliant pipeline label design toolkit for the chemical industry</p>
+            <h1>LabelHash</h1>
+            <p class="tagline">Precision Labeling for Process Equipment — ISO 20560-compliant label generation for pipelines, tanks, reactors, and vessels.</p>
             <a href="https://label.simon-lab.org" class="btn btn-primary" target="_blank">Launch Application</a>
         </div>
     </section>
@@ -94,8 +93,25 @@
         <div class="container">
             <h2>Screenshots</h2>
             <div class="screenshots-grid">
-                <img src="../assets/screenshots/label-1.png" alt="Label Designer - Ethylene Oxide Label">
-                <img src="../assets/screenshots/label-2.png" alt="Label Designer - Sulfuric Acid Label">
+                <img src="../assets/screenshots/label-1.png" alt="LabelHash - Ethylene Oxide Label">
+                <img src="../assets/screenshots/label-2.png" alt="LabelHash - Sulfuric Acid Label">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Labels in Action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../assets/gallery/label-photo-1.jpg" alt="Pipeline label - Filtrat/popluczyny">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/label-photo-2.jpg" alt="Pipeline label - Rozpuszczalnik">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/label-photo-3.jpg" alt="Pipeline label - Ekstrakt do cementacji">
+                </div>
             </div>
         </div>
     </section>
@@ -105,16 +121,16 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Simon Lab</h4>
-                    <p>AI-Powered Engineering<br>for Chemical Industry</p>
+                    <p>Computational Engineering<br>for Chemical Projects</p>
                 </div>
                 <div class="footer-section">
                     <h4>Applications</h4>
-                    <a href="label-designer.html">Pipeline Label Designer</a>
+                    <a href="labelhash.html">LabelHash</a>
                     <a href="process-view.html">ProcessView</a>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>info@simon-lab.org</p>
+                    <p class="email-contact" data-user="info" data-domain="simon-lab.org"></p>
                     <a href="https://simon-lab.org">simon-lab.org</a>
                 </div>
             </div>
@@ -124,6 +140,12 @@
         </div>
     </footer>
 
+    <div class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="">
+    </div>
+
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>
