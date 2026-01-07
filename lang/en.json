@@ -12,7 +12,7 @@
   "hero": {
     "title": "Computational Engineering<br>for Chemical Projects",
     "tagline": "From lab bench to repository. Structuring engineering data as code—traceable, verifiable, and machine-readable from day one.",
-    "cta_apps": "Explore the Suite",
+    "cta_apps": "Our Tools",
     "cta_contact": "Get in Touch"
   },
   "mission": {
@@ -25,7 +25,7 @@
     "p5": "This isn't about replacing engineers. It's about giving them infrastructure that keeps pace with the tools now available."
   },
   "philosophy": {
-    "title": "Project-as-Code",
+    "title": "The Project-as-Code Philosophy",
     "p1": "Traditional chemical projects live in static documents. Grant proposals become PDFs. P&IDs become drawings. Simulations become spreadsheets. Each handoff introduces drift, each revision risks inconsistency, and ultimately—the project's logic dies in formats no system can parse.",
     "p2": "Project-as-Code inverts this paradigm.",
     "p3": "We define project parameters in structured, version-controlled code from the grant phase forward. The mathematics are validated before the first funding request. The process flow compiles into a working simulation before the first line is drawn.",
@@ -77,7 +77,7 @@
     }
   },
   "about": {
-    "title": "About Simon Lab",
+    "title": "About Us",
     "p1": "Simon Lab delivers computational engineering services for the chemical industry. We combine process engineering expertise with code-native methodologies to structure projects that are auditable, traceable, and ready for the computational tools of today and tomorrow.",
     "p2": "Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor."
   },

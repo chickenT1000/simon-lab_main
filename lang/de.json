@@ -12,7 +12,7 @@
   "hero": {
     "title": "Computational Engineering<br>für Chemieprojekte",
     "tagline": "Vom Labortisch zum Repository. Strukturierung von Ingenieurdaten als Code—nachverfolgbar, verifizierbar und maschinenlesbar vom ersten Tag an.",
-    "cta_apps": "Suite erkunden",
+    "cta_apps": "Unsere Werkzeuge",
     "cta_contact": "Kontakt aufnehmen"
   },
   "mission": {
@@ -25,7 +25,7 @@
     "p5": "Es geht nicht darum, Ingenieure zu ersetzen. Es geht darum, ihnen Infrastruktur zu geben, die mit den verfügbaren Werkzeugen Schritt hält."
   },
   "philosophy": {
-    "title": "Project-as-Code",
+    "title": "Die Project-as-Code Philosophie",
     "p1": "Traditionelle Chemieprojekte leben in statischen Dokumenten. Förderanträge werden zu PDFs. P&IDs werden zu Zeichnungen. Simulationen werden zu Tabellenkalkulationen. Jede Übergabe führt zu Drift, jede Revision riskiert Inkonsistenz, und letztendlich—die Logik des Projekts stirbt in Formaten, die kein System analysieren kann.",
     "p2": "Project-as-Code kehrt dieses Paradigma um.",
     "p3": "Wir definieren Projektparameter in strukturiertem, versionskontrolliertem Code ab der Förderphase. Die Mathematik wird validiert, bevor der erste Förderantrag gestellt wird. Der Prozessfluss kompiliert zu einer funktionierenden Simulation, bevor die erste Linie gezeichnet wird.",
@@ -77,7 +77,7 @@
     }
   },
   "about": {
-    "title": "Über Simon Lab",
+    "title": "Über uns",
     "p1": "Simon Lab liefert Computational Engineering Services für die chemische Industrie. Wir kombinieren Verfahrenstechnik-Expertise mit code-nativen Methoden, um Projekte zu strukturieren, die auditierbar, nachverfolgbar und bereit für die computationalen Werkzeuge von heute und morgen sind.",
     "p2": "Unsere Arbeit überbrückt die Lücke zwischen traditioneller Ingenieurpraxis und moderner Software-Infrastruktur—sicherstellend, dass Chemieprojekte von Versionskontrolle, Validierung und computationaler Unterstützung profitieren können, ohne Ingenieursstrenge zu opfern."
   },
