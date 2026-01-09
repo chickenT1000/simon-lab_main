@@ -35,10 +35,6 @@
         --app-hero-text: #e0e0e0;
     }
 
-    .logo img {
-        filter: brightness(1.2);
-    }
-
     .app-card img,
     .screenshots-grid img,
     .gallery-item img {
