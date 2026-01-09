@@ -679,7 +679,12 @@ section h2 {
     margin-bottom: 12px;
 }
 
-
+/* Sign In Button */
+.btn-signin {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-left: 15px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -736,6 +741,10 @@ section h2 {
 
     .lang-selector {
         margin-left: 10px;
+    }
+
+    .btn-signin {
+        display: none;
     }
 
     .app-hero .container {

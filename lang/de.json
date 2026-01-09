@@ -7,7 +7,8 @@
     "mission": "Mission",
     "apps": "Anwendungen",
     "about": "Über uns",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "signin": "Anmelden"
   },
   "hero": {
     "title": "Computational Engineering<br>für Chemieprojekte",
