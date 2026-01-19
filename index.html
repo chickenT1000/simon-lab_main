@@ -50,8 +50,8 @@
         <div class="container">
             <a href="/" class="logo">
                 <picture>
-                    <source srcset="assets/logo-dark.png" media="(prefers-color-scheme: dark)">
-                    <img src="assets/logo.png" alt="Simon Lab">
+                    <source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img src="assets/logo-light.svg" alt="Simon Lab">
                 </picture>
             </a>
             <nav class="nav">
@@ -60,6 +60,7 @@
                 <a href="#about" data-i18n="nav.about">About</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
+            <a href="https://auth.simon-lab.org" class="btn btn-primary btn-signin" data-i18n="nav.signin">Sign In</a>
             <div class="lang-selector">
                 <button class="lang-btn">
                     <span class="lang-current">EN</span> &#9662;
@@ -70,13 +71,16 @@
                     <a href="#" data-lang="de">Deutsch</a>
                 </div>
             </div>
-            <a href="https://auth.simon-lab.org" class="btn btn-primary btn-signin" data-i18n="nav.signin">Sign In</a>
             <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
+            <picture class="hero-logo">
+                <source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                <img src="assets/logo-light.svg" alt="Simon Lab">
+            </picture>
             <h1 data-i18n="hero.title">Computational Engineering<br>for Chemical Projects</h1>
             <p class="tagline" data-i18n="hero.tagline">From lab bench to repository. Structuring engineering data as code—traceable, verifiable, and machine-readable from day one.</p>
             <div class="hero-btns">
