@@ -329,31 +329,7 @@ section h2 {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin-bottom: 32px;
-}
-
-.footer-section h4 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: var(--footer-text);
-}
-
-.footer-section a {
-    color: var(--footer-text-muted);
-    display: block;
-    margin-bottom: 8px;
-}
-
-.footer-section a:hover {
-    color: var(--footer-text);
-}
-
-.footer-section p {
-    color: var(--footer-text-muted);
+    margin-bottom: 0;
 }
 
 .footer-contact-rows {
@@ -799,11 +775,6 @@ section h2 {
 
     .screenshots-grid {
         grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 24px;
     }
 
     .footer-contact-row-primary {
