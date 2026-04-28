@@ -86,6 +86,91 @@
     "tagline": "Computational Engineering<br>für Chemieprojekte",
     "apps_title": "Anwendungen",
     "contact_title": "Kontakt",
-    "copyright": "© 2026 Simon Lab. Alle Rechte vorbehalten."
+    "address_label": "Adresse:",
+    "vat_label": "VAT UE:",
+    "nip_label": "NIP:",
+    "regon_label": "REGON:",
+    "email_label": "E-Mail:",
+    "copyright": "© 2026 Simon-Lab. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "menu": "Menü"
+  },
+  "app_pages": {
+    "labelhash": {
+      "meta": {
+        "title": "LabelHash | Simon Lab",
+        "description": "LabelHash - Toolkit von Simon Lab für die ISO 20560-konforme Gestaltung von Rohrleitungskennzeichnungen."
+      },
+      "hero": {
+        "back_link": "&larr; Zurück zur Startseite",
+        "tagline": "Präzise Kennzeichnung für Prozessausrüstung — ISO 20560-konforme Etikettenerstellung für Rohrleitungen, Tanks, Reaktoren und Behälter.",
+        "note": "<strong>Kostenloses Werkzeug für Ingenieure.</strong>",
+        "cta": "Kostenloses Tool starten"
+      },
+      "features": {
+        "title": "Funktionen",
+        "iso": "<strong>ISO 20560-Konformität</strong> - Volle Einhaltung internationaler Standards zur Rohrleitungskennzeichnung",
+        "medium": "<strong>Medienauswahl</strong> - Umfassende Datenbank chemischer Medien mit korrekter Farbcodierung",
+        "ghs": "<strong>GHS-Piktogramme</strong> - Vollständiger Satz von Gefahrensymbolen für chemische Sicherheitskennzeichnung",
+        "hazards": "<strong>Gefahrenhinweise</strong> - Automatische Erzeugung von Warnbändern für gefährliche Stoffe",
+        "colors": "<strong>Farbbänder</strong> - Korrekte Primärbandfarben basierend auf der Medienkategorie",
+        "flow": "<strong>Flussrichtungsanzeigen</strong> - Klare Anzeigen der Flussrichtung für bessere Prozessklarheit",
+        "preview": "<strong>Live-Vorschau</strong> - Etikettenvorschau in Echtzeit mit Lineal-Overlay für präzise Größenbestimmung",
+        "print": "<strong>Druckfertig</strong> - Export von Etiketten für den professionellen Druck",
+        "cta": "Kostenloses Tool verwenden"
+      },
+      "screenshots": {
+        "title": "Screenshots"
+      },
+      "gallery": {
+        "title": "Gedruckte Etiketten"
+      },
+      "images": {
+        "preview": "LabelHash-Vorschau",
+        "screenshot1": "LabelHash - Ethylenoxid-Etikett",
+        "screenshot2": "LabelHash - Schwefelsäure-Etikett",
+        "gallery1": "Rohrleitungskennzeichnung - Filtrat / Spülwässer",
+        "gallery2": "Rohrleitungskennzeichnung - Lösungsmittel",
+        "gallery3": "Rohrleitungskennzeichnung - Zementationsextrakt"
+      }
+    },
+    "processview": {
+      "meta": {
+        "title": "ProcessView | Simon Lab",
+        "description": "ProcessView - webbasiertes SCADA-System für Simulation und Steuerung chemischer Anlagen von Simon Lab."
+      },
+      "hero": {
+        "back_link": "&larr; Zurück zur Startseite",
+        "tagline": "Webbasierte P&amp;ID-Visualisierung mit eingebetteter Physiksimulation für Entwurf und Steuerung chemischer Anlagen",
+        "cta": "Kontakt aufnehmen"
+      },
+      "features": {
+        "title": "Funktionen",
+        "pid": "<strong>P&amp;ID-Visualisierung in Echtzeit</strong> - Interaktive Prozess- und Instrumentierungsdiagramme mit Live-Aktualisierungen",
+        "physics": "<strong>Physiksimulation</strong> - Präzise Simulation der Prozessdynamik einschließlich Durchfluss, Füllständen und Temperaturen",
+        "control": "<strong>Anlagensteuerung</strong> - Steuerung von Ventilen, Pumpen und Reaktoren über eine intuitive Oberfläche",
+        "annotation": "<strong>Annotationsmodus</strong> - Hinzufügen von Notizen, Markierungen und Kommentaren direkt auf dem P&amp;ID",
+        "pipeline": "<strong>Rohrleitungsmanagement</strong> - Verfolgen und Verwalten aller Rohrleitungssegmente mit detaillierten Spezifikationen",
+        "multitenant": "<strong>Mandantenfähige Architektur</strong> - Unterstützung mehrerer isolierter Anlagensimulationen",
+        "export": "<strong>Druckfertiger Export</strong> - Erzeugung technischer Zeichnungsexporte mit korrekten Schriftfeldern",
+        "realtime": "<strong>Echtzeit-Aktualisierungen</strong> - WebSocket-basierte Kommunikation für sofortige Zustands-Synchronisation",
+        "cta": "Kontakt aufnehmen"
+      },
+      "services": {
+        "title": "Unsere Leistungen",
+        "p1": "ProcessView-Leistungen eignen sich ideal für <strong>überschlägige Machbarkeitsstudien</strong> oder als Teil einer <strong>grundlegenden verfahrenstechnischen Planungsphase</strong>. Ob Sie ein Konzept validieren oder Ihren Prozessfluss verfeinern möchten — wir helfen Ihnen, eine funktionsfähige Simulation aufzubauen, bevor irgendeine physische Umsetzung beginnt.",
+        "p2": "Dieser Ansatz ermöglicht es Ihnen, <strong>Ihren zukünftigen Leitstand zu testen, bevor die erste Schweißnaht gesetzt wird</strong>. Validieren Sie Bedienabläufe, prüfen Sie die Steuerungslogik und erkennen Sie potenzielle Probleme — alles in einer Simulationsumgebung, die Ihre spätere Anlage widerspiegelt."
+      },
+      "screenshots": {
+        "title": "Screenshots"
+      },
+      "images": {
+        "preview": "ProcessView-Vorschau",
+        "screenshot1": "ProcessView - Gesamtübersicht der Anlage",
+        "screenshot2": "ProcessView - Reaktordetail mit Rohrleitungen",
+        "screenshot3": "ProcessView - Druckexportansicht"
+      }
+    }
   }
 }

@@ -1,13 +1,16 @@
 const I18n = {
     currentLang: 'en',
     translations: {},
+    pageKey: '',
 
     async init() {
         this.currentLang = this.detectLanguage();
+        this.pageKey = document.body?.dataset.i18nPage || '';
         await this.loadTranslations(this.currentLang);
         this.applyTranslations();
         this.updateLangSelector();
         this.bindLangLinks();
+        document.documentElement.lang = this.currentLang;
     },
 
     detectLanguage() {
@@ -59,24 +62,41 @@ const I18n = {
             }
         });
 
-        document.querySelectorAll('[data-i18n-title]').forEach(el => {
-            const key = el.getAttribute('data-i18n-title');
-            const translation = this.getNestedValue(this.translations, key);
-            if (translation) {
-                el.title = translation;
-            }
-        });
+        this.applyAttributeTranslations('data-i18n-title', 'title');
+        this.applyAttributeTranslations('data-i18n-alt', 'alt');
+        this.applyAttributeTranslations('data-i18n-aria-label', 'aria-label');
 
-        const pageTitle = this.getNestedValue(this.translations, 'meta.title');
+        const pageTitle = this.getPageTranslation('meta.title');
         if (pageTitle) {
             document.title = pageTitle;
         }
 
         const metaDesc = document.querySelector('meta[name="description"]');
-        const descTranslation = this.getNestedValue(this.translations, 'meta.description');
+        const descTranslation = this.getPageTranslation('meta.description');
         if (metaDesc && descTranslation) {
             metaDesc.setAttribute('content', descTranslation);
         }
+    },
+
+    applyAttributeTranslations(dataAttribute, attributeName) {
+        document.querySelectorAll(`[${dataAttribute}]`).forEach(el => {
+            const key = el.getAttribute(dataAttribute);
+            const translation = this.getNestedValue(this.translations, key);
+            if (translation) {
+                el.setAttribute(attributeName, translation);
+            }
+        });
+    },
+
+    getPageTranslation(key) {
+        if (this.pageKey) {
+            const pageTranslation = this.getNestedValue(this.translations, `${this.pageKey}.${key}`);
+            if (pageTranslation) {
+                return pageTranslation;
+            }
+        }
+
+        return this.getNestedValue(this.translations, key);
     },
 
     getNestedValue(obj, path) {

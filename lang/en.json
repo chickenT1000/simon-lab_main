@@ -86,6 +86,91 @@
     "tagline": "Computational Engineering<br>for Chemical Projects",
     "apps_title": "Applications",
     "contact_title": "Contact",
-    "copyright": "© 2026 Simon Lab. All rights reserved."
+    "address_label": "Address:",
+    "vat_label": "VAT UE:",
+    "nip_label": "NIP:",
+    "regon_label": "REGON:",
+    "email_label": "Email:",
+    "copyright": "© 2026 Simon-Lab. All rights reserved."
+  },
+  "common": {
+    "menu": "Menu"
+  },
+  "app_pages": {
+    "labelhash": {
+      "meta": {
+        "title": "LabelHash | Simon Lab",
+        "description": "LabelHash - ISO 20560-compliant pipeline label design toolkit by Simon Lab."
+      },
+      "hero": {
+        "back_link": "&larr; Back to Home",
+        "tagline": "Precision Labeling for Process Equipment — ISO 20560-compliant label generation for pipelines, tanks, reactors, and vessels.",
+        "note": "<strong>Free tool for engineers.</strong>",
+        "cta": "Launch Free Tool"
+      },
+      "features": {
+        "title": "Features",
+        "iso": "<strong>ISO 20560 Compliance</strong> - Full compliance with international pipeline marking standards",
+        "medium": "<strong>Medium Type Selection</strong> - Comprehensive database of chemical media with proper color coding",
+        "ghs": "<strong>GHS Pictograms</strong> - Complete set of hazard pictograms for chemical safety labeling",
+        "hazards": "<strong>Hazard Warnings</strong> - Automatic hazard band generation for dangerous substances",
+        "colors": "<strong>Color Bands</strong> - Correct primary band colors based on medium category",
+        "flow": "<strong>Flow Direction Arrows</strong> - Clear flow direction indicators for process clarity",
+        "preview": "<strong>Live Preview</strong> - Real-time label preview with ruler overlays for accurate sizing",
+        "print": "<strong>Print Ready</strong> - Export labels ready for professional printing",
+        "cta": "Use Free Tool"
+      },
+      "screenshots": {
+        "title": "Screenshots"
+      },
+      "gallery": {
+        "title": "Printed Labels"
+      },
+      "images": {
+        "preview": "LabelHash preview",
+        "screenshot1": "LabelHash - Ethylene oxide label",
+        "screenshot2": "LabelHash - Sulfuric acid label",
+        "gallery1": "Pipeline label - filtrate / washings",
+        "gallery2": "Pipeline label - solvent",
+        "gallery3": "Pipeline label - cementation extract"
+      }
+    },
+    "processview": {
+      "meta": {
+        "title": "ProcessView | Simon Lab",
+        "description": "ProcessView - Web-based SCADA system for chemical plant simulation and control by Simon Lab."
+      },
+      "hero": {
+        "back_link": "&larr; Back to Home",
+        "tagline": "Web-based P&amp;ID visualization with embedded physics simulation for chemical plant design and control",
+        "cta": "Contact Us"
+      },
+      "features": {
+        "title": "Features",
+        "pid": "<strong>Real-time P&amp;ID Visualization</strong> - Interactive process and instrumentation diagrams with live updates",
+        "physics": "<strong>Physics Simulation</strong> - Accurate simulation of process dynamics including flow, levels, and temperatures",
+        "control": "<strong>Equipment Control</strong> - Control valves, pumps, and reactors with intuitive interface",
+        "annotation": "<strong>Annotation Mode</strong> - Add notes, markups, and comments directly on the P&amp;ID",
+        "pipeline": "<strong>Pipeline Management</strong> - Track and manage all pipeline segments with detailed specifications",
+        "multitenant": "<strong>Multi-tenant Architecture</strong> - Support for multiple isolated plant simulations",
+        "export": "<strong>Print-ready Export</strong> - Generate technical drawing exports with proper title blocks",
+        "realtime": "<strong>Real-time Updates</strong> - WebSocket-based communication for instant state synchronization",
+        "cta": "Contact Us"
+      },
+      "services": {
+        "title": "Our Services",
+        "p1": "ProcessView services are ideally suited for <strong>back-of-envelope feasibility studies</strong> or as part of a <strong>basic engineering process design stage</strong>. Whether you're validating a concept or refining your process flow, we help you build a working simulation before any physical construction begins.",
+        "p2": "This approach lets you <strong>test your future control room before the first weld is made</strong>. Validate operator workflows, check control logic, and identify potential issues—all in a simulated environment that mirrors your final installation."
+      },
+      "screenshots": {
+        "title": "Screenshots"
+      },
+      "images": {
+        "preview": "ProcessView preview",
+        "screenshot1": "ProcessView - full plant overview",
+        "screenshot2": "ProcessView - reactor detail with pipelines",
+        "screenshot3": "ProcessView - print export view"
+      }
+    }
   }
 }

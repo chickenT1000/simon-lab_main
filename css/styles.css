@@ -356,6 +356,20 @@ section h2 {
     color: var(--footer-text-muted);
 }
 
+.footer-contact-item {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer-contact-item strong {
+    color: var(--footer-text);
+}
+
+.footer-contact-item .email-contact a {
+    display: inline;
+    margin-bottom: 0;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 30px;

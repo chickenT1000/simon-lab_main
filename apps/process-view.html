@@ -5,27 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ProcessView - Web-based SCADA system for chemical plant simulation and control by Simon Lab.">
     <title>ProcessView | Simon Lab</title>
+    <meta name="author" content="Simon-Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simon-lab.org/apps/process-view.html">
+    <link rel="alternate" hreflang="en" href="https://simon-lab.org/apps/process-view.html?lang=en">
+    <link rel="alternate" hreflang="pl" href="https://simon-lab.org/apps/process-view.html?lang=pl">
+    <link rel="alternate" hreflang="de" href="https://simon-lab.org/apps/process-view.html?lang=de">
+    <link rel="alternate" hreflang="x-default" href="https://simon-lab.org/apps/process-view.html">
+    <meta property="og:title" content="ProcessView | Simon Lab">
+    <meta property="og:description" content="ProcessView - Web-based SCADA system for chemical plant simulation and control by Simon Lab.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simon-lab.org/apps/process-view.html">
+    <meta property="og:image" content="https://simon-lab.org/assets/screenshots/process-1.png">
+    <meta property="og:image:alt" content="ProcessView application preview">
+    <meta property="og:site_name" content="Simon-Lab">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="pl_PL">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ProcessView | Simon Lab">
+    <meta name="twitter:description" content="ProcessView - Web-based SCADA system for chemical plant simulation and control by Simon Lab.">
+    <meta name="twitter:image" content="https://simon-lab.org/assets/screenshots/process-1.png">
+    <meta name="twitter:url" content="https://simon-lab.org/apps/process-view.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ProcessView",
+        "applicationCategory": "EngineeringApplication",
+        "operatingSystem": "Web",
+        "url": "https://simon-lab.org/apps/process-view.html",
+        "image": "https://simon-lab.org/assets/screenshots/process-1.png",
+        "description": "Web-based SCADA system for chemical plant simulation and control by Simon-Lab.",
+        "creator": {
+            "@type": "Organization",
+            "name": "Simon-Lab",
+            "url": "https://simon-lab.org/"
+        },
+        "featureList": [
+            "Interactive P&ID visualization",
+            "Embedded physics simulation",
+            "Control logic validation",
+            "Technical drawing export"
+        ]
+    }
+    </script>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-i18n-page="app_pages.processview">
     <header class="header">
         <div class="container">
             <a href="../index.html" class="logo">
                 <picture>
-                    <source srcset="../assets/logo-dark.png" media="(prefers-color-scheme: dark)">
-                    <img src="../assets/logo.png" alt="Simon Lab">
+                    <source srcset="../assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img src="../assets/logo-light.svg" alt="Simon Lab">
                 </picture>
             </a>
             <nav class="nav">
-                <a href="../index.html#mission">Mission</a>
-                <a href="../index.html#apps">Applications</a>
-                <a href="../index.html#about">About</a>
-                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#mission" data-i18n="nav.mission">Mission</a>
+                <a href="../index.html#apps" data-i18n="nav.apps">Applications</a>
+                <a href="../index.html#about" data-i18n="nav.about">About</a>
+                <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
             </nav>
+            <a href="https://auth.simon-lab.org" class="btn btn-primary btn-signin" data-i18n="nav.signin">Sign In</a>
             <div class="lang-selector">
                 <button class="lang-btn">
                     <span class="lang-current">EN</span> &#9662;
@@ -36,84 +82,84 @@
                     <a href="#" data-lang="de">Deutsch</a>
                 </div>
             </div>
-            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+            <button class="mobile-menu-btn" aria-label="Menu" data-i18n-aria-label="common.menu">&#9776;</button>
         </div>
     </header>
 
     <section class="app-hero">
         <div class="container">
             <div class="app-hero-content">
-                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+                <a href="../index.html" class="back-link" data-i18n="app_pages.processview.hero.back_link">&larr; Back to Home</a>
                 <h1>ProcessView</h1>
-                <p class="tagline">Web-based P&ID visualization with embedded physics simulation for chemical plant design and control</p>
-                <a href="../index.html#contact" class="btn btn-primary">Contact Us</a>
+                <p class="tagline" data-i18n="app_pages.processview.hero.tagline">Web-based P&amp;ID visualization with embedded physics simulation for chemical plant design and control</p>
+                <a href="../index.html#contact" class="btn btn-primary" data-i18n="app_pages.processview.hero.cta">Contact Us</a>
             </div>
             <div class="app-hero-preview">
-                <img src="../assets/screenshots/process-1.png" alt="ProcessView Preview">
+                <img src="../assets/screenshots/process-1.png" alt="ProcessView Preview" data-i18n-alt="app_pages.processview.images.preview">
             </div>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <h2>Features</h2>
+            <h2 data-i18n="app_pages.processview.features.title">Features</h2>
             <div class="features-list">
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Real-time P&ID Visualization</strong> - Interactive process and instrumentation diagrams with live updates</p>
+                    <p data-i18n="app_pages.processview.features.pid"><strong>Real-time P&amp;ID Visualization</strong> - Interactive process and instrumentation diagrams with live updates</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Physics Simulation</strong> - Accurate simulation of process dynamics including flow, levels, and temperatures</p>
+                    <p data-i18n="app_pages.processview.features.physics"><strong>Physics Simulation</strong> - Accurate simulation of process dynamics including flow, levels, and temperatures</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Equipment Control</strong> - Control valves, pumps, and reactors with intuitive interface</p>
+                    <p data-i18n="app_pages.processview.features.control"><strong>Equipment Control</strong> - Control valves, pumps, and reactors with intuitive interface</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Annotation Mode</strong> - Add notes, markups, and comments directly on the P&ID</p>
+                    <p data-i18n="app_pages.processview.features.annotation"><strong>Annotation Mode</strong> - Add notes, markups, and comments directly on the P&amp;ID</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Pipeline Management</strong> - Track and manage all pipeline segments with detailed specifications</p>
+                    <p data-i18n="app_pages.processview.features.pipeline"><strong>Pipeline Management</strong> - Track and manage all pipeline segments with detailed specifications</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Multi-tenant Architecture</strong> - Support for multiple isolated plant simulations</p>
+                    <p data-i18n="app_pages.processview.features.multitenant"><strong>Multi-tenant Architecture</strong> - Support for multiple isolated plant simulations</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Print-ready Export</strong> - Generate technical drawing exports with proper title blocks</p>
+                    <p data-i18n="app_pages.processview.features.export"><strong>Print-ready Export</strong> - Generate technical drawing exports with proper title blocks</p>
                 </div>
                 <div class="feature-item">
                     <span class="check">&#10003;</span>
-                    <p><strong>Real-time Updates</strong> - WebSocket-based communication for instant state synchronization</p>
+                    <p data-i18n="app_pages.processview.features.realtime"><strong>Real-time Updates</strong> - WebSocket-based communication for instant state synchronization</p>
                 </div>
             </div>
             <div style="text-align: center;">
-                <a href="../index.html#contact" class="btn btn-primary">Contact Us</a>
+                <a href="../index.html#contact" class="btn btn-primary" data-i18n="app_pages.processview.features.cta">Contact Us</a>
             </div>
         </div>
     </section>
 
     <section class="about">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 data-i18n="app_pages.processview.services.title">Our Services</h2>
             <div class="about-content">
-                <p>ProcessView services are ideally suited for <strong>back-of-envelope feasibility studies</strong> or as part of a <strong>basic engineering process design stage</strong>. Whether you're validating a concept or refining your process flow, we help you build a working simulation before any physical construction begins.</p>
-                <p>This approach lets you <strong>test your future control room before the first weld is made</strong>. Validate operator workflows, check control logic, and identify potential issues—all in a simulated environment that mirrors your final installation.</p>
+                <p data-i18n="app_pages.processview.services.p1">ProcessView services are ideally suited for <strong>back-of-envelope feasibility studies</strong> or as part of a <strong>basic engineering process design stage</strong>. Whether you're validating a concept or refining your process flow, we help you build a working simulation before any physical construction begins.</p>
+                <p data-i18n="app_pages.processview.services.p2">This approach lets you <strong>test your future control room before the first weld is made</strong>. Validate operator workflows, check control logic, and identify potential issues—all in a simulated environment that mirrors your final installation.</p>
             </div>
         </div>
     </section>
 
     <section class="screenshots">
         <div class="container">
-            <h2>Screenshots</h2>
+            <h2 data-i18n="app_pages.processview.screenshots.title">Screenshots</h2>
             <div class="screenshots-grid">
-                <img src="../assets/screenshots/process-1.png" alt="ProcessView - Full Plant Overview">
-                <img src="../assets/screenshots/process-2.png" alt="ProcessView - Reactor Detail with Pipelines">
-                <img src="../assets/screenshots/process-3.png" alt="ProcessView - Print Export View">
+                <img src="../assets/screenshots/process-1.png" alt="ProcessView - Full Plant Overview" data-i18n-alt="app_pages.processview.images.screenshot1">
+                <img src="../assets/screenshots/process-2.png" alt="ProcessView - Reactor Detail with Pipelines" data-i18n-alt="app_pages.processview.images.screenshot2">
+                <img src="../assets/screenshots/process-3.png" alt="ProcessView - Print Export View" data-i18n-alt="app_pages.processview.images.screenshot3">
             </div>
         </div>
     </section>
@@ -122,22 +168,26 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Simon Lab</h4>
-                    <p>Computational Engineering<br>for Chemical Projects</p>
+                    <h4>Simon-Lab</h4>
+                    <p data-i18n="footer.tagline">Computational Engineering<br>for Chemical Projects</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Applications</h4>
+                    <h4 data-i18n="footer.apps_title">Applications</h4>
                     <a href="labelhash.html">LabelHash</a>
                     <a href="process-view.html">ProcessView</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p class="email-contact" data-user="info" data-domain="simon-lab.org"></p>
+                    <h4 data-i18n="footer.contact_title">Contact</h4>
+                    <p class="footer-contact-item"><strong data-i18n="footer.address_label">Address:</strong><br>Juliana Tuwima 4/8<br>41-800 Zabrze</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.vat_label">VAT UE:</strong> PL6482629454</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.nip_label">NIP:</strong> 6482629454</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.regon_label">REGON:</strong> 544133932</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.email_label">Email:</strong> <span class="email-contact" data-user="szymon.wojciechowski" data-domain="simon-lab.org"></span></p>
                     <a href="https://simon-lab.org">simon-lab.org</a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 Simon Lab. All rights reserved.
+            <div class="footer-bottom" data-i18n="footer.copyright">
+                &copy; 2026 Simon-Lab. All rights reserved.
             </div>
         </div>
     </footer>

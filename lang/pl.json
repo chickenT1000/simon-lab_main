@@ -86,6 +86,91 @@
     "tagline": "Inżynieria Obliczeniowa<br>dla Projektów Chemicznych",
     "apps_title": "Aplikacje",
     "contact_title": "Kontakt",
-    "copyright": "© 2026 Simon Lab. Wszelkie prawa zastrzeżone."
+    "address_label": "Adres:",
+    "vat_label": "VAT UE:",
+    "nip_label": "NIP:",
+    "regon_label": "REGON:",
+    "email_label": "Email:",
+    "copyright": "© 2026 Simon-Lab. Wszelkie prawa zastrzeżone."
+  },
+  "common": {
+    "menu": "Menu"
+  },
+  "app_pages": {
+    "labelhash": {
+      "meta": {
+        "title": "LabelHash | Simon Lab",
+        "description": "LabelHash - narzędzie Simon Lab do projektowania oznaczeń rurociągów zgodnych z ISO 20560."
+      },
+      "hero": {
+        "back_link": "&larr; Powrót do strony głównej",
+        "tagline": "Precyzyjne etykietowanie aparatury procesowej — generowanie oznaczeń zgodnych z ISO 20560 dla rurociągów, zbiorników, reaktorów i naczyń.",
+        "note": "<strong>Darmowe narzędzie dla inżynierów.</strong>",
+        "cta": "Uruchom darmowe narzędzie"
+      },
+      "features": {
+        "title": "Funkcje",
+        "iso": "<strong>Zgodność z ISO 20560</strong> - Pełna zgodność z międzynarodowymi standardami oznaczania rurociągów",
+        "medium": "<strong>Wybór medium</strong> - Rozbudowana baza mediów chemicznych z prawidłowym kodowaniem kolorystycznym",
+        "ghs": "<strong>Piktogramy GHS</strong> - Pełny zestaw piktogramów zagrożeń do oznaczeń bezpieczeństwa chemicznego",
+        "hazards": "<strong>Ostrzeżenia o zagrożeniach</strong> - Automatyczne generowanie pasów ostrzegawczych dla substancji niebezpiecznych",
+        "colors": "<strong>Pasy kolorystyczne</strong> - Prawidłowe kolory podstawowych pasów według kategorii medium",
+        "flow": "<strong>Strzałki kierunku przepływu</strong> - Czytelne oznaczenia kierunku przepływu dla większej przejrzystości procesu",
+        "preview": "<strong>Podgląd na żywo</strong> - Podgląd etykiety w czasie rzeczywistym z nakładką linijki dla dokładnego wymiarowania",
+        "print": "<strong>Gotowe do druku</strong> - Eksport etykiet przygotowanych do profesjonalnego druku",
+        "cta": "Użyj darmowego narzędzia"
+      },
+      "screenshots": {
+        "title": "Zrzuty ekranu"
+      },
+      "gallery": {
+        "title": "Wydrukowane etykiety"
+      },
+      "images": {
+        "preview": "Podgląd LabelHash",
+        "screenshot1": "LabelHash - etykieta tlenku etylenu",
+        "screenshot2": "LabelHash - etykieta kwasu siarkowego",
+        "gallery1": "Etykieta rurociągu - filtrat / popłuczyny",
+        "gallery2": "Etykieta rurociągu - rozpuszczalnik",
+        "gallery3": "Etykieta rurociągu - ekstrakt do cementacji"
+      }
+    },
+    "processview": {
+      "meta": {
+        "title": "ProcessView | Simon Lab",
+        "description": "ProcessView - webowy system SCADA do symulacji i sterowania instalacjami chemicznymi od Simon Lab."
+      },
+      "hero": {
+        "back_link": "&larr; Powrót do strony głównej",
+        "tagline": "Webowa wizualizacja P&amp;ID z wbudowaną symulacją fizyki do projektowania i sterowania instalacjami chemicznymi",
+        "cta": "Skontaktuj się z nami"
+      },
+      "features": {
+        "title": "Funkcje",
+        "pid": "<strong>Wizualizacja P&amp;ID w czasie rzeczywistym</strong> - Interaktywne schematy procesowe i aparaturowe z bieżącymi aktualizacjami",
+        "physics": "<strong>Symulacja fizyki</strong> - Dokładna symulacja dynamiki procesu, w tym przepływów, poziomów i temperatur",
+        "control": "<strong>Sterowanie aparaturą</strong> - Obsługa zaworów, pomp i reaktorów przez intuicyjny interfejs",
+        "annotation": "<strong>Tryb adnotacji</strong> - Dodawanie notatek, oznaczeń i komentarzy bezpośrednio na P&amp;ID",
+        "pipeline": "<strong>Zarządzanie rurociągami</strong> - Śledzenie i zarządzanie wszystkimi odcinkami rurociągów wraz ze szczegółową specyfikacją",
+        "multitenant": "<strong>Architektura wielodostępna</strong> - Obsługa wielu odseparowanych symulacji instalacji",
+        "export": "<strong>Eksport gotowy do druku</strong> - Generowanie eksportów rysunków technicznych z prawidłowymi tabliczkami rysunkowymi",
+        "realtime": "<strong>Aktualizacje w czasie rzeczywistym</strong> - Komunikacja oparta na WebSocket dla natychmiastowej synchronizacji stanu",
+        "cta": "Skontaktuj się z nami"
+      },
+      "services": {
+        "title": "Nasze usługi",
+        "p1": "Usługi ProcessView idealnie nadają się do <strong>wstępnych studiów wykonalności</strong> lub jako część <strong>etapu podstawowego projektowania procesowego</strong>. Niezależnie od tego, czy weryfikujesz koncepcję, czy dopracowujesz przepływ procesu, pomagamy zbudować działającą symulację zanim rozpocznie się jakakolwiek fizyczna realizacja.",
+        "p2": "Takie podejście pozwala <strong>przetestować przyszłą sterownię, zanim powstanie pierwszy spaw</strong>. Zweryfikuj przebieg pracy operatora, logikę sterowania i potencjalne problemy — wszystko w środowisku symulacyjnym odzwierciedlającym docelową instalację."
+      },
+      "screenshots": {
+        "title": "Zrzuty ekranu"
+      },
+      "images": {
+        "preview": "Podgląd ProcessView",
+        "screenshot1": "ProcessView - pełny widok instalacji",
+        "screenshot2": "ProcessView - detal reaktora z rurociągami",
+        "screenshot3": "ProcessView - widok eksportu do druku"
+      }
+    }
   }
 }
