@@ -94,7 +94,8 @@
     "email_label": "E-Mail:",
     "email_cta": "Klicken, um E-Mail anzuzeigen",
     "copyright": "© 2026 Simon-Lab. Alle Rechte vorbehalten.",
-    "phone_label": "Telefon:"
+    "phone_label": "Telefon:",
+    "phone_cta": "Klicken, um Telefon anzuzeigen"
   },
   "common": {
     "menu": "Menü"

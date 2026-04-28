@@ -48,6 +48,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Phone obfuscation - reveal full phone number as plain text on click
+    document.querySelectorAll('.phone-contact').forEach(function(el) {
+        const phoneCode = el.dataset.phoneCode;
+        if (phoneCode) {
+            const phone = phoneCode
+                .split(',')
+                .map(code => String.fromCharCode(Number(code)))
+                .join('');
+            el.addEventListener('click', function() {
+                if (el.dataset.revealed === 'true') {
+                    return;
+                }
+
+                el.textContent = phone;
+                el.dataset.revealed = 'true';
+                el.classList.add('revealed');
+            });
+        }
+    });
+
     // Close dropdowns on outside click
     document.addEventListener('click', function(e) {
         if (nav && menuBtn && !nav.contains(e.target) && !menuBtn.contains(e.target)) {
