@@ -80,7 +80,8 @@
   "about": {
     "title": "O nas",
     "p1": "Simon Lab dostarcza usługi inżynierii obliczeniowej dla przemysłu chemicznego. Łączymy ekspertyzę z zakresu inżynierii procesowej z metodykami opartymi na kodzie, aby tworzyć projekty audytowalne, identyfikowalne i gotowe na narzędzia obliczeniowe jutra.",
-    "p2": "Nasza praca łączy tradycyjną praktykę inżynierską z nowoczesną infrastrukturą programistyczną – zapewniając, że projekty chemiczne czerpią korzyści z kontroli wersji, automatycznej walidacji i wsparcia obliczeniowego, bez poświęcania inżynierskiej rygorystyczności."
+    "p2": "Nasza praca łączy tradycyjną praktykę inżynierską z nowoczesną infrastrukturą programistyczną – zapewniając, że projekty chemiczne czerpią korzyści z kontroli wersji, automatycznej walidacji i wsparcia obliczeniowego, bez poświęcania inżynierskiej rygorystyczności.",
+    "contact_title": "Kontakt"
   },
   "footer": {
     "tagline": "Inżynieria Obliczeniowa<br>dla Projektów Chemicznych",
@@ -91,7 +92,7 @@
     "nip_label": "NIP:",
     "regon_label": "REGON:",
     "email_label": "Email:",
-    "email_cta": "Wyślij email",
+    "email_cta": "Pokaż email",
     "copyright": "© 2026 Simon-Lab. Wszelkie prawa zastrzeżone."
   },
   "common": {

@@ -80,7 +80,8 @@
   "about": {
     "title": "About Us",
     "p1": "Simon Lab delivers computational engineering services for the chemical industry. We combine process engineering expertise with code-native methodologies to structure projects that are auditable, traceable, and ready for the computational tools of today and tomorrow.",
-    "p2": "Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor."
+    "p2": "Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor.",
+    "contact_title": "Contact"
   },
   "footer": {
     "tagline": "Computational Engineering<br>for Chemical Projects",
@@ -91,7 +92,7 @@
     "nip_label": "NIP:",
     "regon_label": "REGON:",
     "email_label": "Email:",
-    "email_cta": "Send email",
+    "email_cta": "Show email",
     "copyright": "© 2026 Simon-Lab. All rights reserved."
   },
   "common": {
