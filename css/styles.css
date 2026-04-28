@@ -329,11 +329,7 @@ section h2 {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .footer-section h4 {
@@ -356,8 +352,19 @@ section h2 {
     color: var(--footer-text-muted);
 }
 
+.footer-section-contact {
+    width: 100%;
+}
+
+.footer-contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px 24px;
+    align-items: start;
+}
+
 .footer-contact-item {
-    margin-bottom: 12px;
+    margin: 0;
     line-height: 1.6;
 }
 
@@ -365,9 +372,20 @@ section h2 {
     color: var(--footer-text);
 }
 
-.footer-contact-item .email-contact a {
-    display: inline;
-    margin-bottom: 0;
+.footer-email-btn {
+    appearance: none;
+    border: 1px solid var(--footer-border);
+    background: transparent;
+    color: var(--footer-text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    justify-self: start;
+}
+
+.footer-email-btn:hover {
+    background: rgba(255,255,255,0.08);
 }
 
 .footer-bottom {
@@ -751,8 +769,11 @@ section h2 {
     }
 
     .footer-content {
-        flex-direction: column;
-        gap: 30px;
+        margin-bottom: 24px;
+    }
+
+    .footer-contact-list {
+        grid-template-columns: 1fr;
     }
 
     .gallery-grid {

@@ -28,4 +28,4 @@ Simon-Lab provides computational engineering for chemical projects. The company 
 - VAT UE: PL6482629454
 - NIP: 6482629454
 - REGON: 544133932
-- Email: szymon.wojciechowski@simon-lab.org
+- Contact page: https://simon-lab.org/#contact

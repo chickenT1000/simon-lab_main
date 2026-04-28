@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Email obfuscation - decode on page load
+    // Email obfuscation - create mail action on click only
     document.querySelectorAll('.email-contact').forEach(function(el) {
         const user = el.dataset.user;
         const domain = el.dataset.domain;
         if (user && domain) {
             const email = user + '@' + domain;
-            el.innerHTML = '<a href="ma' + 'ilto:' + email + '">' + email + '</a>';
+            el.addEventListener('click', function() {
+                window.location.href = 'ma' + 'ilto:' + email;
+            });
         }
     });
 

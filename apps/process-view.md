@@ -15,4 +15,3 @@ ProcessView is a Simon-Lab web application for web-based P&ID visualization with
 ## Access
 - Main site: https://simon-lab.org/
 - Contact: https://simon-lab.org/#contact
-- Email: szymon.wojciechowski@simon-lab.org

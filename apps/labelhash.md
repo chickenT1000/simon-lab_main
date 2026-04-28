@@ -16,4 +16,4 @@ LabelHash is a Simon-Lab web application for ISO 20560-compliant label generatio
 ## Maintainer
 - Company: Simon-Lab
 - Website: https://simon-lab.org/
-- Email: szymon.wojciechowski@simon-lab.org
+- Contact page: https://simon-lab.org/#contact
