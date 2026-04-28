@@ -92,8 +92,9 @@
     "nip_label": "NIP:",
     "regon_label": "REGON:",
     "email_label": "E-Mail:",
-    "email_cta": "E-Mail anzeigen",
-    "copyright": "© 2026 Simon-Lab. Alle Rechte vorbehalten."
+    "email_cta": "Klicken, um E-Mail anzuzeigen",
+    "copyright": "© 2026 Simon-Lab. Alle Rechte vorbehalten.",
+    "phone_label": "Telefon:"
   },
   "common": {
     "menu": "Menü"
