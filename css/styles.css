@@ -349,6 +349,10 @@ section h2 {
     justify-content: space-between;
 }
 
+.footer-contact-row-name {
+    justify-content: flex-start;
+}
+
 .footer-contact-row-secondary {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -363,6 +367,11 @@ section h2 {
 
 .footer-contact-item strong {
     color: var(--footer-text);
+}
+
+.footer-contact-name {
+    color: var(--footer-text);
+    font-weight: 600;
 }
 
 .footer-contact-identifiers {
