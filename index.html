@@ -231,21 +231,11 @@
             <div class="about-content">
                 <p data-i18n="about.p1">Simon Lab delivers computational engineering services for the chemical industry. We combine process engineering expertise with code-native methodologies to structure projects that are auditable, traceable, and ready for the computational tools of today and tomorrow.</p>
                 <p data-i18n="about.p2">Our work bridges the gap between traditional engineering practice and modern software infrastructure—ensuring that chemical projects can benefit from version control, validation, and computational assistance without sacrificing engineering rigor.</p>
-                <div id="contact" class="about-contact">
-                    <h3 data-i18n="about.contact_title">Contact</h3>
-                    <div class="contact-list">
-                        <p class="contact-item"><strong data-i18n="footer.address_label">Address:</strong> Juliana Tuwima 4/8, 41-800 Zabrze</p>
-                        <p class="contact-item"><strong data-i18n="footer.vat_label">VAT UE:</strong> PL6482629454</p>
-                        <p class="contact-item"><strong data-i18n="footer.nip_label">NIP:</strong> 6482629454</p>
-                        <p class="contact-item"><strong data-i18n="footer.regon_label">REGON:</strong> 544133932</p>
-                        <button type="button" class="contact-email-btn email-contact" data-user-code="115,122,121,109,111,110,46,119,111,106,99,105,101,99,104,111,119,115,107,105" data-domain="simon-lab.org"><span data-i18n="footer.email_cta">Show email</span> <span class="email-domain">@simon-lab.org</span></button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -256,9 +246,20 @@
                     <a href="apps/labelhash.html">LabelHash</a>
                     <a href="apps/process-view.html">ProcessView</a>
                 </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.contact_title">Contact</h4>
-                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="footer-contact-rows">
+                <div class="footer-contact-row footer-contact-row-primary">
+                    <p class="footer-contact-item footer-contact-address"><strong data-i18n="footer.address_label">Address:</strong> Juliana Tuwima 4/8, 41-800 Zabrze, POLAND</p>
+                    <div class="footer-email-inline">
+                        <strong data-i18n="footer.email_label">Email:</strong>
+                        <button type="button" class="email-reveal-btn email-contact" data-user-code="115,122,121,109,111,110,46,119,111,106,99,105,101,99,104,111,119,115,107,105" data-i18n="footer.email_cta">Show email</button>
+                        <span class="email-domain">@simon-lab.org</span>
+                    </div>
+                </div>
+                <div class="footer-contact-row footer-contact-row-secondary">
+                    <p class="footer-contact-item"><strong data-i18n="footer.vat_label">VAT UE:</strong> PL6482629454</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.nip_label">NIP:</strong> 6482629454</p>
+                    <p class="footer-contact-item"><strong data-i18n="footer.regon_label">REGON:</strong> 544133932</p>
                 </div>
             </div>
             <div class="footer-bottom" data-i18n="footer.copyright">

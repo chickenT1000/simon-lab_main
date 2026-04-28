@@ -21,23 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Email obfuscation - reveal local part on first click, open mail client on second
+    // Email obfuscation - reveal local part as plain text on click
     document.querySelectorAll('.email-contact').forEach(function(el) {
         const userCode = el.dataset.userCode;
-        const domain = el.dataset.domain;
-        if (userCode && domain) {
+        if (userCode) {
             const user = userCode
                 .split(',')
                 .map(code => String.fromCharCode(Number(code)))
                 .join('');
-            const email = user + '@' + domain;
             el.addEventListener('click', function() {
                 if (el.dataset.revealed === 'true') {
-                    window.location.href = 'ma' + 'ilto:' + email;
                     return;
                 }
 
-                el.textContent = email;
+                el.textContent = user;
                 el.dataset.revealed = 'true';
                 el.classList.add('revealed');
             });

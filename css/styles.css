@@ -321,56 +321,6 @@ section h2 {
     margin-bottom: 20px;
 }
 
-.about-contact {
-    margin-top: 40px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-}
-
-.about-contact h3 {
-    margin-bottom: 20px;
-}
-
-.contact-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px 24px;
-    align-items: start;
-}
-
-.contact-item {
-    margin: 0;
-    line-height: 1.6;
-}
-
-.contact-item strong {
-    color: var(--text);
-}
-
-.contact-email-btn {
-    appearance: none;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text);
-    padding: 10px 16px;
-    border-radius: 999px;
-    cursor: pointer;
-    font: inherit;
-    justify-self: start;
-}
-
-.contact-email-btn:hover {
-    background: rgba(0,0,0,0.04);
-}
-
-.contact-email-btn.revealed {
-    border-radius: 12px;
-}
-
-.email-domain {
-    color: var(--text-light);
-}
-
 /* Footer */
 .footer {
     background: var(--footer-bg);
@@ -404,6 +354,71 @@ section h2 {
 
 .footer-section p {
     color: var(--footer-text-muted);
+}
+
+.footer-contact-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.footer-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-contact-row-primary {
+    justify-content: space-between;
+}
+
+.footer-contact-row-secondary {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.footer-contact-item {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--footer-text-muted);
+    white-space: nowrap;
+}
+
+.footer-contact-item strong {
+    color: var(--footer-text);
+}
+
+.footer-contact-address,
+.footer-email-inline,
+.email-domain {
+    white-space: nowrap;
+}
+
+.footer-email-inline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--footer-text-muted);
+}
+
+.email-reveal-btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--footer-text);
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: underline;
+}
+
+.email-reveal-btn:hover {
+    color: var(--footer-text);
+}
+
+.email-reveal-btn.revealed {
+    text-decoration: none;
 }
 
 .footer-bottom {
@@ -791,6 +806,16 @@ section h2 {
         gap: 24px;
     }
 
+    .footer-contact-row-primary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-contact-row-secondary {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -818,7 +843,4 @@ section h2 {
         justify-content: center;
     }
 
-    .contact-list {
-        grid-template-columns: 1fr;
-    }
 }
