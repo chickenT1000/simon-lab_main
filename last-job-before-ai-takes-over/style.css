@@ -11,7 +11,7 @@
     --shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
     --accent: #007dbe;
     --radius: 22px;
-    --composer-height: 136px;
+    --composer-height: 120px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,8 +65,8 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    min-height: 64px;
-    padding: 0.8rem clamp(1rem, 3vw, 2rem);
+    min-height: 56px;
+    padding: 0.65rem max(1rem, env(safe-area-inset-left)) 0.65rem max(1rem, env(safe-area-inset-right));
     border-bottom: 1px solid var(--line);
     background: color-mix(in srgb, var(--surface) 90%, transparent);
     backdrop-filter: blur(18px);
@@ -90,12 +90,7 @@ a {
 .brand-logo img {
     display: block;
     width: auto;
-    height: 26px;
-}
-
-.brand-label {
-    border-left: 1px solid var(--line);
-    padding-left: 0.75rem;
+    height: 22px;
 }
 
 .muted {
@@ -105,10 +100,13 @@ a {
 
 .top-actions {
     display: flex;
+    align-items: center;
     gap: 0.45rem;
 }
 
 .top-actions button {
+    min-width: 44px;
+    min-height: 44px;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: transparent;
@@ -120,6 +118,11 @@ a {
 .top-actions button:disabled {
     color: var(--faint);
     cursor: not-allowed;
+}
+
+.share-wrap {
+    position: relative;
+    display: inline-flex;
 }
 
 .top-actions button:not(:disabled):hover {
@@ -136,15 +139,15 @@ a {
 }
 
 .page-shell {
-    width: min(100% - 2rem, 820px);
+    width: 100%;
     margin: 0 auto;
-    padding: 4.5rem 0 calc(var(--composer-height) + 5rem);
+    padding: 3rem 1rem calc(var(--composer-height) + 5rem);
 }
 
 .intro {
     max-width: 690px;
-    margin: 0 auto 3rem;
-    text-align: center;
+    margin: 0 0 2.2rem;
+    text-align: left;
 }
 
 .eyebrow {
@@ -159,7 +162,7 @@ a {
 .intro h1 {
     margin: 0;
     color: var(--text);
-    font-size: clamp(2rem, 5vw, 4.25rem);
+    font-size: clamp(1.9rem, 10vw, 3.2rem);
     line-height: 1.04;
     letter-spacing: -0.065em;
 }
@@ -172,8 +175,8 @@ a {
 
 .message {
     display: grid;
-    grid-template-columns: 38px minmax(0, 1fr);
-    gap: 0.8rem;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 0.62rem;
     align-items: start;
     animation: rise 0.32s ease-out;
 }
@@ -185,14 +188,14 @@ a {
 
 .avatar {
     display: grid;
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     place-items: center;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--surface-strong);
     color: var(--muted);
-    font-size: 0.76rem;
+    font-size: 0.68rem;
     font-weight: 700;
 }
 
@@ -202,7 +205,7 @@ a {
 }
 
 .user-bubble {
-    max-width: min(620px, 86%);
+    max-width: 100%;
     border-radius: var(--radius);
     background: var(--bubble);
     padding: 0.82rem 1rem;
@@ -305,7 +308,7 @@ a {
     bottom: 0;
     left: 0;
     z-index: 30;
-    padding: 1rem max(1rem, env(safe-area-inset-left)) calc(0.8rem + env(safe-area-inset-bottom));
+    padding: 0.75rem max(0.75rem, env(safe-area-inset-left)) calc(0.75rem + env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-right));
     background:
         linear-gradient(to top, var(--bg) 62%, color-mix(in srgb, var(--bg) 62%, transparent));
 }
@@ -314,7 +317,7 @@ a {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 44px;
     gap: 0.7rem;
-    width: min(100% - 1rem, 820px);
+    width: min(100%, 820px);
     margin: 0 auto;
     padding: 0.56rem;
     border: 1px solid var(--line);
@@ -331,6 +334,7 @@ a {
     outline: 0;
     background: transparent;
     color: var(--text);
+    font-size: 16px;
     padding: 0.65rem 0.35rem 0.45rem 0.75rem;
 }
 
@@ -362,11 +366,16 @@ a {
 }
 
 .waiting-line {
-    width: min(100% - 1rem, 820px);
-    margin: 2rem auto 0;
+    align-self: flex-end;
+    max-width: min(100%, 620px);
+    margin: 0.25rem 0 0;
     color: var(--muted);
     font-size: 0.84rem;
-    text-align: center;
+    text-align: right;
+}
+
+.waiting-line.user-side {
+    padding-right: 0.15rem;
 }
 
 .waiting-line span {
@@ -420,10 +429,6 @@ a {
     color: var(--muted);
 }
 
-.modal-lead {
-    margin-bottom: 0.25rem;
-}
-
 .modal-email {
     overflow-wrap: anywhere;
     font-size: 1.02rem;
@@ -439,8 +444,8 @@ a {
     position: absolute;
     top: 0.8rem;
     right: 0.8rem;
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
     border: 0;
     border-radius: 50%;
     background: var(--bubble);
@@ -451,6 +456,7 @@ a {
 }
 
 .copy-button {
+    min-height: 44px;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--text);
@@ -464,24 +470,27 @@ a {
     font-size: 0.86rem;
 }
 
-.toast {
-    position: fixed;
-    bottom: calc(var(--composer-height) + 0.8rem);
-    left: 50%;
+.share-toast {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 0.5rem);
     z-index: 120;
-    transform: translateX(-50%);
+    width: max-content;
+    max-width: min(92vw, 360px);
+    transform: translateY(-50%);
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--surface-strong);
     box-shadow: var(--shadow);
     color: var(--text);
-    padding: 0.6rem 0.9rem;
+    padding: 0.65rem 0.95rem;
     font-size: 0.88rem;
+    white-space: nowrap;
     opacity: 0;
     pointer-events: none;
 }
 
-.toast.visible {
+.share-toast.visible {
     animation: toast 1.8s ease forwards;
 }
 
@@ -518,55 +527,129 @@ a {
 @keyframes toast {
     0% {
         opacity: 0;
-        transform: translate(-50%, 8px);
+        transform: translateY(calc(-50% + 8px));
     }
     16%,
     78% {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: translateY(-50%);
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, 4px);
+        transform: translateY(calc(-50% + 4px));
     }
 }
 
-@media (max-width: 640px) {
-    .topbar {
-        min-height: 58px;
-    }
-
-    .top-actions {
-        display: flex;
-    }
-
+@media (max-width: 480px) {
     .top-actions button:disabled {
         display: none;
     }
 
+    .share-toast {
+        top: calc(100% + 0.4rem);
+        right: 0;
+        transform: none;
+    }
+
+    .share-toast.visible {
+        animation-name: toast-mobile;
+    }
+
+    .modal {
+        align-items: end;
+        padding: 0;
+    }
+
+    .modal-card {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+        border-radius: 24px 24px 0 0;
+        padding: 1.5rem 1rem calc(1.5rem + env(safe-area-inset-bottom));
+    }
+
+    .modal-card::before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+        width: 44px;
+        height: 4px;
+        border-radius: 999px;
+        background: var(--line);
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes toast-mobile {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    16%,
+    78% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+}
+
+@media (min-width: 720px) {
+    :root {
+        --composer-height: 136px;
+    }
+
+    .topbar {
+        min-height: 64px;
+        padding: 0.8rem clamp(1rem, 3vw, 2rem);
+    }
+
+    .brand-logo img {
+        height: 26px;
+    }
+
     .page-shell {
-        width: min(100% - 1.2rem, 820px);
-        padding-top: 3rem;
+        width: min(100% - 2rem, 820px);
+        padding: 4.5rem 0 calc(var(--composer-height) + 5rem);
     }
 
     .intro {
-        margin-bottom: 2.2rem;
-        text-align: left;
+        margin: 0 auto 3rem;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: clamp(2rem, 5vw, 4.25rem);
     }
 
     .message {
-        grid-template-columns: 30px minmax(0, 1fr);
-        gap: 0.62rem;
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 0.8rem;
     }
 
     .avatar {
-        width: 28px;
-        height: 28px;
-        font-size: 0.68rem;
+        width: 34px;
+        height: 34px;
+        font-size: 0.76rem;
     }
 
     .user-bubble {
-        max-width: 92%;
+        max-width: min(620px, 86%);
+    }
+}
+
+@media (hover: none) {
+    .top-actions button:not(:disabled):hover {
+        border-color: var(--line);
+        color: var(--text);
+    }
+
+    .composer button:hover {
+        transform: none;
     }
 }
 

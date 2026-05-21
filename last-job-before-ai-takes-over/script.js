@@ -3,11 +3,11 @@ const promptOne = "remind me, what's the main goal?";
 const promptTwo = "i'll need help, but most people just slow me down — any ideas?";
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const TIMING = {
-    startDelayMs: 5000,
+    startDelayMs: 10000,
     promptTypeDurationMs: 5000,
-    thinkingDurationMs: 5000,
+    thinkingDurationMs: 7000,
     replyStreamDurationMs: 5000,
-    interTurnThinkMs: 5000,
+    interTurnThinkMs: 7000,
 };
 
 const replyOne = `Simon Lab ACHEMA 14.06.2027 Working-Backwards Press Release
@@ -135,6 +135,8 @@ const shareButton = document.getElementById("shareButton");
 const toast = document.getElementById("toast");
 let lastFocusedElement = null;
 let toastTimeout = null;
+let scriptedConversationDone = false;
+let waitingLine = null;
 
 const sleep = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
 const frame = () => new Promise((resolve) => window.requestAnimationFrame(resolve));
@@ -155,6 +157,32 @@ function appendMessage(role) {
     message.append(content);
     chatLog.append(message);
     return { message, content };
+}
+
+function createWaitingLine() {
+    const line = document.createElement("div");
+    const text = document.createElement("span");
+    line.className = "waiting-line user-side";
+    line.setAttribute("aria-live", "polite");
+    text.textContent = "Waiting for user input...";
+    line.append(text);
+    return line;
+}
+
+function syncWaitingLine() {
+    if (!scriptedConversationDone) {
+        return;
+    }
+
+    const shouldShow = composerInput.value.length === 0;
+
+    if (shouldShow && !waitingLine) {
+        waitingLine = createWaitingLine();
+        chatLog.append(waitingLine);
+    } else if (!shouldShow && waitingLine) {
+        waitingLine.remove();
+        waitingLine = null;
+    }
 }
 
 async function typeUser(text, duration = TIMING.promptTypeDurationMs) {
@@ -340,6 +368,8 @@ async function runConversation() {
     await typeUser(promptTwo);
     await showThinking();
     await streamAssistant(replyTwo);
+    scriptedConversationDone = true;
+    syncWaitingLine();
 }
 
 function resizeComposer() {
@@ -442,7 +472,10 @@ async function copyCurrentLink() {
     showToast("Link copied");
 }
 
-composerInput.addEventListener("input", resizeComposer);
+composerInput.addEventListener("input", () => {
+    resizeComposer();
+    syncWaitingLine();
+});
 composerInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
