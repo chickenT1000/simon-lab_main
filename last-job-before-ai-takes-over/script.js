@@ -1,7 +1,14 @@
 const EMAIL = "szymon.wojciechowski@simon-lab.org";
-const promptOne = "remind me what is the main goal?";
+const promptOne = "remind me, what's the main goal?";
 const promptTwo = "i'll need help, but most people just slow me down — any ideas?";
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const TIMING = {
+    startDelayMs: 5000,
+    promptTypeDurationMs: 5000,
+    thinkingDurationMs: 5000,
+    replyStreamDurationMs: 5000,
+    interTurnThinkMs: 5000,
+};
 
 const replyOne = `Simon Lab ACHEMA 14.06.2027 Working-Backwards Press Release
 
@@ -118,15 +125,16 @@ You are not hiring them to write code. You are hiring them to command an army of
 You are looking for your conceptual clone: someone with the same spark in their eyes when they see a well-designed, self-repairing system. Do not rush. One such person can replace five traditional programmers and actually accelerate your startup.`;
 
 const chatLog = document.getElementById("chatLog");
-const replyOneSentinel = document.getElementById("replyOneSentinel");
 const composerForm = document.getElementById("composerForm");
 const composerInput = document.getElementById("composerInput");
 const modal = document.getElementById("contactModal");
 const modalCard = modal.querySelector(".modal-card");
 const copyEmail = document.getElementById("copyEmail");
 const copyStatus = document.getElementById("copyStatus");
+const shareButton = document.getElementById("shareButton");
+const toast = document.getElementById("toast");
 let lastFocusedElement = null;
-let secondTurnStarted = false;
+let toastTimeout = null;
 
 const sleep = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
 const frame = () => new Promise((resolve) => window.requestAnimationFrame(resolve));
@@ -149,7 +157,7 @@ function appendMessage(role) {
     return { message, content };
 }
 
-async function typeUser(text) {
+async function typeUser(text, duration = TIMING.promptTypeDurationMs) {
     const { content } = appendMessage("user");
 
     if (reducedMotion) {
@@ -157,14 +165,20 @@ async function typeUser(text) {
         return;
     }
 
-    for (let i = 0; i < text.length; i += 1) {
-        content.textContent += text[i];
-        content.scrollIntoView({ block: "nearest" });
-        await sleep(26 + Math.random() * 34);
+    const startedAt = performance.now();
+    let visibleChars = 0;
+
+    while (visibleChars < text.length) {
+        const elapsed = performance.now() - startedAt;
+        visibleChars = Math.min(text.length, Math.floor((elapsed / duration) * text.length));
+        content.textContent = text.slice(0, visibleChars);
+        await frame();
     }
+
+    content.textContent = text;
 }
 
-async function showThinking() {
+async function showThinking(duration = TIMING.thinkingDurationMs) {
     const { message, content } = appendMessage("assistant");
     const thinking = document.createElement("div");
     thinking.className = "thinking";
@@ -173,13 +187,13 @@ async function showThinking() {
     content.append(thinking);
 
     if (!reducedMotion) {
-        await sleep(1200 + Math.random() * 450);
+        await sleep(duration);
     }
 
     message.remove();
 }
 
-async function streamAssistant(text, shouldFollow = true) {
+async function streamAssistant(text, duration = TIMING.replyStreamDurationMs) {
     const { content } = appendMessage("assistant");
     content.classList.add("assistant-stream");
 
@@ -188,15 +202,13 @@ async function streamAssistant(text, shouldFollow = true) {
         return content;
     }
 
-    let index = 0;
-    const chunkSize = Math.max(18, Math.ceil(text.length / 190));
+    const startedAt = performance.now();
+    let visibleChars = 0;
 
-    while (index < text.length) {
-        content.textContent += text.slice(index, index + chunkSize);
-        index += chunkSize;
-        if (shouldFollow) {
-            content.scrollIntoView({ block: "end" });
-        }
+    while (visibleChars < text.length) {
+        const elapsed = performance.now() - startedAt;
+        visibleChars = Math.min(text.length, Math.floor((elapsed / duration) * text.length));
+        content.textContent = text.slice(0, visibleChars);
         await frame();
     }
 
@@ -265,51 +277,18 @@ function appendInline(parent, line) {
     parent.append(label, document.createTextNode(labelMatch[2]));
 }
 
-function isNearReplyOneEnd() {
-    const rect = replyOneSentinel.getBoundingClientRect();
-    return rect.top < window.innerHeight - 120;
-}
-
-function armSecondTurnGate() {
-    let timeReady = false;
-    let scrollReady = false;
-
-    const tryStart = () => {
-        if (secondTurnStarted || !timeReady || !scrollReady) {
-            return;
-        }
-
-        secondTurnStarted = true;
-        window.removeEventListener("scroll", onScroll);
-        runSecondTurn();
-    };
-
-    const onScroll = () => {
-        if (isNearReplyOneEnd()) {
-            scrollReady = true;
-            tryStart();
-        }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.setTimeout(() => {
-        timeReady = true;
-        tryStart();
-    }, 15000);
-}
-
-async function runSecondTurn() {
-    await typeUser(promptTwo);
-    await showThinking();
-    await streamAssistant(replyTwo);
-}
-
 async function runConversation() {
-    await sleep(reducedMotion ? 0 : 650);
+    if (!reducedMotion) {
+        await showThinking(TIMING.startDelayMs);
+    }
+
     await typeUser(promptOne);
     await showThinking();
     await streamAssistant(replyOne);
-    armSecondTurnGate();
+    await showThinking(TIMING.interTurnThinkMs);
+    await typeUser(promptTwo);
+    await showThinking();
+    await streamAssistant(replyTwo);
 }
 
 function resizeComposer() {
@@ -375,6 +354,43 @@ async function copyEmailAddress() {
     }
 }
 
+function showToast(message) {
+    window.clearTimeout(toastTimeout);
+    toast.textContent = message;
+    toast.hidden = false;
+    toast.classList.remove("visible");
+    void toast.offsetWidth;
+    toast.classList.add("visible");
+    toastTimeout = window.setTimeout(() => {
+        toast.hidden = true;
+        toast.classList.remove("visible");
+    }, 1850);
+}
+
+function fallbackCopy(text) {
+    const input = document.createElement("input");
+    input.value = text;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.append(input);
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+}
+
+async function copyCurrentLink() {
+    const link = window.location.href;
+
+    try {
+        await navigator.clipboard.writeText(link);
+    } catch {
+        fallbackCopy(link);
+    }
+
+    showToast("Link copied");
+}
+
 composerInput.addEventListener("input", resizeComposer);
 composerInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !event.shiftKey) {
@@ -396,5 +412,6 @@ modal.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", handleModalKeys);
 copyEmail.addEventListener("click", copyEmailAddress);
+shareButton.addEventListener("click", copyCurrentLink);
 resizeComposer();
 runConversation();

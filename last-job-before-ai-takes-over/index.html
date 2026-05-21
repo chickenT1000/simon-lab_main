@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex,nofollow">
     <link rel="canonical" href="https://simon-lab.org/last-job-before-ai-takes-over/">
     <title>Simon Lab — Private Chat</title>
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,12 +16,15 @@
 <body>
     <header class="topbar">
         <a class="brand" href="/" aria-label="Simon Lab home">
-            <span class="brand-mark">SL</span>
-            <span>Simon Lab — chat <span class="muted">(private)</span></span>
+            <picture class="brand-logo">
+                <source srcset="/assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+                <img src="/assets/logo-light.svg" alt="Simon Lab">
+            </picture>
+            <span class="brand-label">chat <span class="muted">(private)</span></span>
         </a>
         <nav class="top-actions" aria-label="Chat actions">
             <button type="button" disabled>New chat</button>
-            <button type="button" disabled>Share</button>
+            <button id="shareButton" type="button">Share</button>
         </nav>
     </header>
 
@@ -31,7 +35,7 @@
         </section>
 
         <section id="chatLog" class="chat-log" role="log" aria-live="polite" aria-label="Conversation"></section>
-        <div id="replyOneSentinel" class="sentinel" aria-hidden="true"></div>
+        <p class="waiting-line" aria-live="polite"><span>Waiting for user input...</span></p>
     </main>
 
     <footer class="composer-shell" aria-label="Message composer">
@@ -41,7 +45,6 @@
                 <span aria-hidden="true">↑</span>
             </button>
         </form>
-        <p class="waiting-line" aria-live="polite"><span>… waiting for your input</span></p>
     </footer>
 
     <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
@@ -49,11 +52,14 @@
         <section class="modal-card" tabindex="-1">
             <button class="modal-close" type="button" aria-label="Close" data-close-modal>×</button>
             <h2 id="modalTitle">Reach out</h2>
-            <p>Contact us at <a href="mailto:szymon.wojciechowski@simon-lab.org">szymon.wojciechowski@simon-lab.org</a></p>
+            <p class="modal-lead">Contact us at</p>
+            <p class="modal-email"><a href="mailto:szymon.wojciechowski@simon-lab.org">szymon.wojciechowski@simon-lab.org</a></p>
             <button id="copyEmail" class="copy-button" type="button">Copy email</button>
             <p id="copyStatus" class="copy-status" role="status" aria-live="polite"></p>
         </section>
     </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
     <script src="script.js"></script>
 </body>
