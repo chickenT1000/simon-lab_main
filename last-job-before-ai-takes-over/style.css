@@ -214,15 +214,32 @@ a {
     white-space: pre-wrap;
 }
 
-.assistant-title {
-    margin: 1.1rem 0 0.55rem;
+.assistant-h1,
+.assistant-h2,
+.assistant-h3 {
     color: var(--text);
-    font-size: 1rem;
     font-weight: 700;
     line-height: 1.4;
 }
 
-.assistant-title:first-child {
+.assistant-h1 {
+    margin: 1.05rem 0 0.55rem;
+    font-size: 1.05rem;
+}
+
+.assistant-h2 {
+    margin: 0.7rem 0 0.42rem;
+    font-size: 0.96rem;
+}
+
+.assistant-h3 {
+    margin: 0.4rem 0 0.28rem;
+    font-size: 0.9rem;
+}
+
+.assistant-h1:first-child,
+.assistant-h2:first-child,
+.assistant-h3:first-child {
     margin-top: 0;
 }
 
@@ -275,6 +292,11 @@ a {
 
 .thinking span:nth-child(3) {
     animation-delay: 0.28s;
+}
+
+.reply-gate-sentinel {
+    width: 100%;
+    height: 1px;
 }
 
 .composer-shell {

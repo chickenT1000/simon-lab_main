@@ -117,7 +117,7 @@ Example task: “We have an AI agent that must analyze a technological diagram, 
 You have a huge advantage: you already have the skills of tomorrow. For a young, brilliant person, the chance to work directly with someone who has a PhD-level hard-engineering background and can also vibe-code advanced agentic systems is like winning the lottery. You offer an evolutionary shortcut: you can teach them a way of thinking that a university will not transfer to them in a decade.
 
 1. Play with open cards: neurodivergence as an asset.
-Say it directly: “I move fast, I have ADHD, my brain jumps across patterns. I am looking for someone who can keep up, thinks systemically, and gets excited by automating the real world with AI.” This immediately filters out people looking for a warm corporate seat.
+Say it directly: “I move fast, I have ADHD, my brain sees systems where others see just noise. I am looking for someone who can keep up, thinks systemically, and gets excited by automating the real world with AI.” This immediately filters out people looking for a warm corporate seat.
 
 2. Define the role as Agent Operator / Architect.
 You are not hiring them to write code. You are hiring them to command an army of agents, design prompts, and verify their outputs under your supervision.
@@ -217,14 +217,23 @@ async function streamAssistant(text, duration = TIMING.replyStreamDurationMs) {
 }
 
 function formatAssistantText(container, text) {
-    const titleLines = new Set([
+    const headingOneLines = new Set([
         "Simon Lab ACHEMA 14.06.2027 Working-Backwards Press Release",
         "Press Release",
         "Customer Promise",
         "FAQ",
+        "1. Psychological profile: who are you actually looking for?",
+        "3. Where do people like this hide, physically and digitally?",
+        "4. How do you attract them without killing their drive?",
+    ]);
+    const headingTwoLines = new Set([
         "A. Look for the outlier indicator",
         "B. The inverted recruiting conversation",
         "C. Trial day",
+    ]);
+    const headingThreeLines = new Set([
+        "1. Play with open cards: neurodivergence as an asset.",
+        "2. Define the role as Agent Operator / Architect.",
     ]);
 
     container.classList.remove("assistant-stream");
@@ -248,8 +257,12 @@ function formatAssistantText(container, text) {
         }
 
         const item = document.createElement("div");
-        if (titleLines.has(trimmed) || /^\d+\.\s/.test(trimmed)) {
-            item.className = "assistant-title";
+        if (headingOneLines.has(trimmed)) {
+            item.className = "assistant-h1";
+        } else if (headingTwoLines.has(trimmed)) {
+            item.className = "assistant-h2";
+        } else if (headingThreeLines.has(trimmed)) {
+            item.className = "assistant-h3";
         } else if (/^Q:\s/.test(trimmed)) {
             item.className = "assistant-question";
         } else if (/^•\s/.test(trimmed)) {
@@ -277,6 +290,43 @@ function appendInline(parent, line) {
     parent.append(label, document.createTextNode(labelMatch[2]));
 }
 
+function waitForUserScrollToEnd() {
+    const sentinel = document.createElement("div");
+    sentinel.className = "reply-gate-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    chatLog.append(sentinel);
+
+    return new Promise((resolve) => {
+        const finish = () => {
+            observer?.disconnect();
+            window.removeEventListener("scroll", checkFallback);
+            sentinel.remove();
+            resolve();
+        };
+        const checkFallback = () => {
+            const rect = sentinel.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight - 96) {
+                finish();
+            }
+        };
+        let observer = null;
+
+        if ("IntersectionObserver" in window) {
+            observer = new IntersectionObserver((entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                    finish();
+                }
+            }, { threshold: 1 });
+            observer.observe(sentinel);
+        } else {
+            window.addEventListener("scroll", checkFallback, { passive: true });
+        }
+
+        checkFallback();
+    });
+}
+
 async function runConversation() {
     if (!reducedMotion) {
         await showThinking(TIMING.startDelayMs);
@@ -285,6 +335,7 @@ async function runConversation() {
     await typeUser(promptOne);
     await showThinking();
     await streamAssistant(replyOne);
+    await waitForUserScrollToEnd();
     await showThinking(TIMING.interTurnThinkMs);
     await typeUser(promptTwo);
     await showThinking();
