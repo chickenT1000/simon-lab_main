@@ -58,12 +58,17 @@
         .stats-counter {
             display: block;
             margin-bottom: 1rem;
+            min-height: 28px;
         }
 
         .stats-note {
             margin-top: 2rem;
             color: var(--text-light);
             font-size: 0.95rem;
+        }
+
+        .stats-load-btn {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -82,19 +87,44 @@
             <article class="stats-card">
                 <h2>Main homepage</h2>
                 <p><a href="/">simon-lab.org/</a></p>
-                <img class="stats-counter" src="https://hits.sh/simon-lab.org/main.svg?style=flat-square&amp;label=main%20hits" alt="Main homepage hit count">
+                <button class="btn btn-primary stats-load-btn" type="button" data-counter-key="simon-lab.org/main" data-counter-label="main hits" data-counter-alt="Main homepage hit count">Load count</button>
+                <span class="stats-counter" aria-live="polite">Count not loaded.</span>
                 <a href="https://hits.sh/simon-lab.org/main/">Open counter page</a>
             </article>
 
             <article class="stats-card">
                 <h2>Recruitment page</h2>
                 <p><a href="/last-job-before-ai-takes-over/">simon-lab.org/last-job-before-ai-takes-over/</a></p>
-                <img class="stats-counter" src="https://hits.sh/simon-lab.org/last-job-before-ai-takes-over.svg?style=flat-square&amp;label=recruitment%20hits" alt="Recruitment page hit count">
+                <button class="btn btn-primary stats-load-btn" type="button" data-counter-key="simon-lab.org/last-job-before-ai-takes-over" data-counter-label="recruitment hits" data-counter-alt="Recruitment page hit count">Load count</button>
+                <span class="stats-counter" aria-live="polite">Count not loaded.</span>
                 <a href="https://hits.sh/simon-lab.org/last-job-before-ai-takes-over/">Open counter page</a>
             </article>
         </section>
 
-        <p class="stats-note">This page is not linked from the site and is marked noindex. Opening it may add one hit to the displayed counters.</p>
+        <p class="stats-note">This page is not linked from the site and is marked noindex. Opening it does not load the counters. Clicking Load count or opening a counter page may add one hit to that specific counter.</p>
     </main>
+
+    <script>
+        document.querySelectorAll('.stats-load-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const key = button.dataset.counterKey;
+                const label = button.dataset.counterLabel || 'hits';
+                const alt = button.dataset.counterAlt || 'Hit count';
+                const target = button.nextElementSibling;
+
+                if (!key || !target || !/^[a-z0-9._/-]+$/i.test(key)) {
+                    return;
+                }
+
+                const img = document.createElement('img');
+                img.src = 'https://hits.sh/' + key + '.svg?style=flat-square&label=' + encodeURIComponent(label);
+                img.alt = alt;
+                target.textContent = '';
+                target.appendChild(img);
+                button.disabled = true;
+                button.textContent = 'Loaded';
+            });
+        });
+    </script>
 </body>
 </html>
